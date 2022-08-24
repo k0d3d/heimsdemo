@@ -1,0 +1,76 @@
+append head
+  link(rel='stylesheet', href='/css/table-fixed-header.css')
+  link(rel='stylesheet', href='/css/extra/timeline/component.css')
+
+block body
+  include ../includes/dialogs/stock/modal-stock-down.jade
+  include ../includes/dialogs/stock/modal-request-stock.jade
+
+  nav.shpane.cbp-spmenu.cbp-spmenu-vertical.cbp-spmenu-right(ng-class="spmenu",ng-style="shpane")
+    ul.cbp_tmtimeline.skdwn-hstry
+      li(ng-repeat="sh in shz")
+        time.cbp_tmtime(datetime="{{sh.date}}")
+          span  {{sh.date| date: 'fullDate'}}
+          span  {{sh.amount}}
+        i.cbp_tmicon.fa(ng-class="{'fa-level-up' : _stockDirection(sh), 'fa-level-down' : _stockDirection(sh) }")
+        .cbp_tmlabel
+          h4 {{sh.action}}
+          p <strong>At: </strong> {{sh.date| date:'shortTime'}}
+    div.summary-actions.skdwn-summary
+      p(style="height: 61px; background-color: rgb(255, 74, 74)")
+        form.form-inline
+          .form-group
+            label Boiling Point
+            input(type="number", ng-model="currentItemBP", style="padding: 0 0px;width: 100%;border-radius: 0;border: solid 1px #D51414;height: 32px;")
+      p
+        button.btn.btn-block.btn-warning(data-ng-click="commons.href('/items/'+summary._id+'/edit')") Update
+      p
+        button.btn.btn-block.btn-default.btn-close(data-ng-click="spmenu=''", ng-class="spmenu") Close
+
+  .row-fluid.row-break
+    .span2.actioncol
+      button.btn.btn-large.btn-block.btn-primary(new-modal="#modal-create-stock-down") New Location
+      button.btn.btn-large.btn-block.btn-primary(new-modal="#modal-request-stock-down") Stock Out
+      button.btn.btn-large.btn-block.btn-default(ng-click="commons.backBtn()") Go Back
+    .span2
+      h4 Locations
+      ul.list-block(toggle-active-list)
+        li(data-ng-repeat="location in sub_locations", ng-click="onLocation(location._id)")
+          h5(editable="locationNameChange(name, index)", index="{{$index}}") {{location.locationName}}
+
+    .span8
+      .row-fluid.fixed-table
+        .span12
+          .table-content(ng-show="hasItems")
+            table#list-orders.table.table-fixed-header
+              thead.header
+                tr
+                  th Item Name
+                  th Last Requested
+                  th in Stock
+                  th Actions
+              tbody
+                tr(ng-repeat="lo in stockDownRecord | orderBy: lo.item.itemName", on-finish="tableheader")
+                  td <a href="/items/{{lo.item._id}}/edit/iv-edit">{{lo.item.itemName}}</a>
+                  td {{lo.lastOrderDate | date: 'medium' }}
+                  td {{lo.amount}}
+                  td
+                    .btn-group.dropdown
+                      button.btn.btn-primary(data-toggle="dropdown", title="Boiling Point")
+                        i.fa.fa-flask
+                      .dropdown-menu.alt-text
+                        form.new-stock-down
+                          .control-group
+                            label.control-label Boiling Point
+                            .controls
+                              input.input-medium.input-block-level(type="number",ng-model="lo.boilingPoint", required)
+                            .controls
+                              button.btn.btn-inverse.input-block-level(style="border-radius: 0", ng-click="postBp($index)") Update
+                    button.btn.btn-primary(ng-click="doHistory($event, lo.locationId, lo.item._id)", title="Stock History")
+                      i.fa.fa-clock-o
+          .no-item-holder(ng-show="!hasItems")
+            h4 Choose a location.
+
+append foot
+  script(src="js/table-fixed-header.js")
+

@@ -1,0 +1,45 @@
+div(ng-controller="usersController")
+  .span5.offset1.account-information-pane
+    h4 Account Information
+    form#login(novalidate)
+      label(for="name") Facility / Company Name
+      input.span6(type="text", ng-model="facility.company", required, placeholder="Free Clinic Ltd")
+      label(for="address") Name
+      input.span6(type="text", ng-model="facility.first_name", placeholder="John")
+      input.span6(type="text", ng-model="facility.last_name", placeholder="Doe")
+      label(for="address") Facility Address
+      input.span12(type="text", ng-model="facility.address_1", required, placeholder="1 Smith Way")
+      input.span6(type="text", ng-model="facility.address_2", placeholder="Block 2")
+      label(for="city") City
+      input#city.span6(type="text", name="city", ng-model="facility.city", placeholder="Victoria Island")
+      label(for="state") State
+      input#state.span6(type="text", name="state", ng-model="facility.state", required, placeholder="Lagos")
+
+      label(for="telephone") Phone Number
+      input#telephone(type="tel", name="phone", ng-model="facility.phone", placeholder="0800 124 4567")
+      label(for="telephone") Email
+      input#telephone(type="tel", name="email", ng-model="facility.email", placeholder="you@example.com", readonly)
+      .control-group
+        .controls
+          button.btn.btn-info(type="submit", ng-click="saveFacilityInformation(facility)") Save
+  .span3.offset1
+    div.pr-btn-drpdwn.upd-menu
+      h4 Activate DDIMs
+      form(accept-charset='UTF-8', name="login_form", novalidate)
+        .control-group
+          .controls
+            input(style='margin-bottom: 15px;', type='text', placeholder='Email Address', name='email',ng-model="facility.email", required)
+        .control-group(ng-hide="facility.isLoggedIn")
+          .controls
+            input(style='margin-bottom: 15px;', type='password', placeholder='Password', name='consumer_key',ng-model="facility.password", required)
+        //
+          .control-group
+            .controls
+              input(style='margin-bottom: 15px;', type='password', placeholder='Consumer Secret', name='consumer_secret',ng-model="facility.consumer_secret", required)
+        .control-group
+          .controls(ng-hide="facility.isLoggedIn")
+            button#sign-in.btn.btn-primary(type='submit', style="border-radius: 6px", ng-disabled="login_form.$invalid", ng-click="login_user(facility)") Activate
+          .controls(ng-show="facility.isLoggedIn")
+            button#sign-in.btn.btn-primary(type='submit', style="border-radius: 6px",  ng-click="logout_user(facility)") Logout
+
+

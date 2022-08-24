@@ -1,0 +1,2073 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"padd",
+				"padding-left"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"pull-",
+				"pull-right"
+			],
+			[
+				"index",
+				"index_item"
+			],
+			[
+				"select",
+				"selected"
+			],
+			[
+				"grou",
+				"groupedItems"
+			],
+			[
+				"grouped",
+				"grouped_items_list"
+			],
+			[
+				"selected",
+				"selectedItem"
+			],
+			[
+				"ty",
+				"typeAction"
+			],
+			[
+				"billpr",
+				"billingProfile"
+			],
+			[
+				"dispe",
+				"dispenseID"
+			],
+			[
+				"check",
+				"check_send_sms"
+			],
+			[
+				"omit",
+				"omit_from_all"
+			],
+			[
+				"service",
+				"serviceid"
+			],
+			[
+				"summ",
+				"summary"
+			],
+			[
+				"suma",
+				"summaryView"
+			],
+			[
+				"su",
+				"summaryView"
+			],
+			[
+				"summa",
+				"summaryView"
+			],
+			[
+				"view",
+				"summaryView"
+			],
+			[
+				"paddo",
+				"padding-top"
+			],
+			[
+				"itemS",
+				"itemSummary"
+			],
+			[
+				"current",
+				"currentItem"
+			],
+			[
+				"state",
+				"stateParams"
+			],
+			[
+				"ui-",
+				"ui-view"
+			],
+			[
+				"ui",
+				"ui-view"
+			],
+			[
+				"quick",
+				"quickorder"
+			],
+			[
+				"sto",
+				"stock-history-view"
+			],
+			[
+				"anch",
+				"anchor_index〔argument〕"
+			],
+			[
+				"curr",
+				"currentAnchor"
+			],
+			[
+				"btn",
+				"btn-default"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"col",
+				"col-xs-6"
+			],
+			[
+				"orders",
+				"Orders"
+			],
+			[
+				"req",
+				"requestOptions〔namespace〕"
+			],
+			[
+				"save",
+				"save_one_product"
+			],
+			[
+				"ds",
+				"ds_instance"
+			],
+			[
+				"job",
+				"jobQueue"
+			],
+			[
+				"search",
+				"searchResult"
+			],
+			[
+				"query",
+				"query_options〔argument〕"
+			],
+			[
+				"count",
+				"countOrDoc〔argument〕"
+			],
+			[
+				"res",
+				"result"
+			],
+			[
+				"DsIte",
+				"DsItems〔variable〕"
+			],
+			[
+				"queri",
+				"query_string〔argument〕"
+			],
+			[
+				"quer",
+				"query_string〔argument〕"
+			],
+			[
+				"cal",
+				"calc_dosage"
+			],
+			[
+				"dosage",
+				"dosage_count_in_package_size"
+			],
+			[
+				"spa",
+				"span6"
+			],
+			[
+				"admin",
+				"adminUser〔argument〕"
+			],
+			[
+				"return",
+				"returnAddresses"
+			],
+			[
+				"ret",
+				"returnAddresses"
+			],
+			[
+				"nomb",
+				"nombers"
+			],
+			[
+				"send",
+				"sendSMS〔variable〕"
+			],
+			[
+				"phone",
+				"phones"
+			],
+			[
+				"print",
+				"printOrderToSupplier"
+			],
+			[
+				"suppli",
+				"suppliers"
+			],
+			[
+				"l",
+				"l	@low"
+			],
+			[
+				"order",
+				"orderbody"
+			],
+			[
+				"parse",
+				"parseInt〔function〕"
+			],
+			[
+				"itemP",
+				"itemPurchaseRate"
+			],
+			[
+				"Drug",
+				"DrugStoc"
+			],
+			[
+				"self",
+				"selfOrder〔variable〕"
+			],
+			[
+				"Or",
+				"OrderStatus"
+			],
+			[
+				"Order",
+				"OrderStatus〔variable〕"
+			],
+			[
+				"Dis",
+				"DispenseController〔class〕"
+			],
+			[
+				"Suppl",
+				"SupplierController"
+			],
+			[
+				"Sup",
+				"SupplierModel〔class〕"
+			],
+			[
+				"Transa",
+				"TransactionModel"
+			],
+			[
+				"item",
+				"item/"
+			],
+			[
+				"itemI",
+				"itemId〔argument〕"
+			],
+			[
+				"prod",
+				"productId"
+			],
+			[
+				"produc",
+				"product"
+			],
+			[
+				"location",
+				"$location〔argument〕"
+			],
+			[
+				"sear",
+				"searchcmp"
+			],
+			[
+				"invento",
+				"inventory_item"
+			],
+			[
+				"now",
+				"now_product"
+			],
+			[
+				"items",
+				"itemsService〔argument〕"
+			],
+			[
+				"orderT",
+				"orderToGo"
+			],
+			[
+				"orderS",
+				"ordersService"
+			],
+			[
+				"te",
+				"text-align"
+			],
+			[
+				"text",
+				"text-transform"
+			],
+			[
+				"pr",
+				"product_id"
+			],
+			[
+				"stock",
+				"stockdown"
+			],
+			[
+				"selec",
+				"selectedItemId"
+			],
+			[
+				"listof",
+				"listofItems"
+			],
+			[
+				"admi",
+				"adminModel〔variable〕"
+			],
+			[
+				"loca",
+				"locationData〔argument〕"
+			],
+			[
+				"getOrder",
+				"getOrderCart〔function〕"
+			],
+			[
+				"cart",
+				"cartUpdated"
+			],
+			[
+				"ordersS",
+				"ordersService"
+			],
+			[
+				"import",
+				"importer"
+			],
+			[
+				"attr",
+				"attributes"
+			],
+			[
+				"DsI",
+				"DsItemsModel"
+			],
+			[
+				"ger",
+				"getDSProductFields"
+			],
+			[
+				"retru",
+				"returnVal"
+			],
+			[
+				"cu",
+				"currentPage"
+			],
+			[
+				"skip",
+				"skipSearch"
+			],
+			[
+				"ac",
+				"activeText"
+			],
+			[
+				"find",
+				"findRegisteredItem"
+			],
+			[
+				"Items",
+				"ItemsObject〔class〕"
+			],
+			[
+				"set",
+				"setKeywords"
+			],
+			[
+				"Na",
+				"NafdacDrugsModel"
+			],
+			[
+				"reg",
+				"regNo"
+			],
+			[
+				"nad",
+				"nafdacRegNo"
+			],
+			[
+				"Item",
+				"ItemSchema〔variable〕"
+			],
+			[
+				"span",
+				"span9"
+			],
+			[
+				"row",
+				"row-fluid"
+			],
+			[
+				"cons",
+				"consumer_secret"
+			],
+			[
+				"c",
+				"consumer_key"
+			],
+			[
+				"up",
+				"updateUserProfile"
+			],
+			[
+				"DS",
+				"DSC"
+			],
+			[
+				"user",
+				"userInfo〔argument〕"
+			],
+			[
+				"d",
+				"dsitem.js"
+			],
+			[
+				"consumer",
+				"consumer_secret"
+			],
+			[
+				"product",
+				"product_id"
+			],
+			[
+				"add",
+				"address_2"
+			],
+			[
+				"last",
+				"last_name"
+			],
+			[
+				"Admin",
+				"AdminController〔class〕"
+			],
+			[
+				"route",
+				"$routeParams〔argument〕"
+			],
+			[
+				"exter",
+				"extraQs〔variable〕"
+			],
+			[
+				"this",
+				"thisItem"
+			],
+			[
+				"fetch",
+				"fetchDSProductInformation"
+			],
+			[
+				"DSC",
+				"DSClass〔class〕"
+			],
+			[
+				"requ",
+				"requestOptions"
+			],
+			[
+				"DS_CLOUD",
+				"DS_CLOUD_URL"
+			],
+			[
+				"success",
+				"successfully"
+			],
+			[
+				"update",
+				"updateProductInformation〔function〕"
+			],
+			[
+				"re",
+				"requestLib〔variable〕"
+			],
+			[
+				"proto",
+				"prototype"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "app/views/items/index.jade",
+			"settings":
+			{
+				"buffer_size": 6044,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "// HMIS Plug and Play Integration\n// ------------------------------\n\n\n// This document explains how RESTful request\n// can be made to DIMS to carry out inventory\n// specific operations like ordering and item\n// querying. DIMS HTTP server runs on port 8888.\n//\nvar util = require('util'),\n    request = require('request'),\n    apiConfig = require('config').api,\n    Q = require('q'),\n    _ = require('lodash'),\n    Items = require('../models/item/item-schema').Item;\n\n\n\n\n\nmodule.exports.routes = function(app){\n\n\n  function createOrUpdateItem (items, ref) {\n    var q = Q.defer();\n    var item = items.pop();\n    var allerrs = [];\n\n    Items.findOne({\n      linkedIds: item[ref]\n    }, function (err, doc) {\n      if (err) {\n        allerrs.push(err);\n      }\n      if (doc) {\n        if (doc.linkedIds.length) {\n          if (_.indexOf(doc.linkedIds, item[ref]) === -1) {\n            doc.itemName = item.itemname;\n            doc.linkedIds.push(item[ref]);\n            doc.save(function (err) {\n               if (err) {\n                allerrs.push(err);\n               }\n            });\n          }\n        }\n      } else {\n        var new_item = new Items();\n        new_item.linkedIds.push(item[ref]);\n        new_item.itemName = item.itemname;\n        new_item.save(function (err) {\n          if (err) {\n            allerrs.push(err);\n          }\n        });\n      }\n      if (items.length) {\n        createOrUpdateItem(items, ref);\n      } else {\n        q.resolve(true);\n      }\n    });\n\n    return q.promise;\n  }\n\n\n  app.get('/hmisdemo/items', function (req, res) {\n    res.json({'items':[\n      {'itemcode':'PAC01', 'itemname':'PANADOL', 'unitquantity':'12', 'unitcost':'300'},\n      {'itemcode':'PAC02', 'itemname':'PANADOL', 'unitquantity':'12', 'unitcost':'300'},\n      {'itemcode':'PAC03', 'itemname':'PANADOL', 'unitquantity':'12', 'unitcost':'300'}\n    ]});\n  });\n\n  //get all items from the hmis system.\n  //TODO: add a date or timestamp parameter\n  //to query for items added after a specific date.\n  //this way, a large payload is avoided after a\n  //major or initial pull request\n  //This route expects the a GET request which must contain a\n  //ref query parameter where the value of 'ref' is the a string\n  //which is stored as an element of the linkedIds array\n  //on DIMS item-schema that matches an item on DIMS to an item\n  //on the HMIS. eg\n  //\n  //`var ItemSchema = new Schema({\n  //   itemID: {type: Number, default: ''},\n  //   itemType: {type: String, default: ''},\n  //   itemName: {type: String, default: ''},\n  //   sciName: {type: String, default: ''},\n  //   itemCategory: [\n  //     {type: String}\n  //   ],\n  //   linkedIds : [{**itemcode**}],\n  // });`\n  //\n  //By default, the JSON response for this request is an array of items.\n  //If your response is wrapped as the value of a property eg. {items: [{Object}, {Object}]},\n  //you need to supply a query parameter called wrap where its value is the name of the\n  //the property containg the array of items requested e.g '?wrap = items'.\n  app.get('/hmis/items', function (req, res, next) {\n    if (!req.query.ref) {\n      return res.status(400).json({\n        error: 1,\n        message: 'Reference value is absent.',\n        tip: 'Your query should contain a \"ref=??\" eg. http://dims:8888?ref=itemCode'\n      });\n    }\n    request({\n      baseUrl: apiConfig.HMIS_URL,\n      url :  apiConfig.HMIS_ROUTES.ALL_ITEMS,\n      method: 'GET'\n      },\n      function (e, r, body) {\n        if (e) {\n          return next(e);\n        }\n\n        var b = JSON.parse(body);\n        if (req.query.wrap) {\n          if (!req.query.wrap.length) {\n            return res.status(400).json({\n              error: 1,\n              message: 'Empty value for \"wrap\"',\n              tip: 'Provide a value for \"wrap\" or remove it'\n            });\n          }\n          b = b[req.query.wrap];\n        }\n        if (b && b.length) {\n          var itemsCount = b.length;\n          createOrUpdateItem(b, req.query.ref)\n          .then(function (done) {\n            if (done) {\n              return res.json({no: itemsCount});\n            }\n          }, function (err) {\n            return next(err);\n          });\n        } else {\n          res.status(400).json({\n            error: 1,\n            message: 'Request expects a Array-like response',\n            tip: 'Respond with array of objects [{object}, {Object}]'\n          });\n        }\n\n    });\n  });\n\n  //get all suppliers from the hmis system\n  //TODO: the same date parameter should be passed\n  //along with query.\n  app.get('/hmis/suppliers', function (req, res, next) {\n    if (!req.query.ref) {\n      return res.status(400).json({\n        error: 1,\n        message: 'Reference value is absent.',\n        tip: 'Your query should contain a \"ref=??\" eg. http://dims:8888?ref=supplierId'\n      });\n    }\n\n    request({\n      baseUrl: apiConfig.HMIS_URL,\n      url :  apiConfig.HMIS_ROUTES.ALL_SUPPLIERS,\n      method: 'GET'\n      }, function (e, r, body) {\n        if (e) {\n          return next(e);\n        }\n\n        var b = JSON.parse(body);\n        if (req.query.wrap) {\n          if (!req.query.wrap.length) {\n            return res.status(400).json({\n              error: 1,\n              message: 'Empty value for \"wrap\"',\n              tip: 'Provide a value for \"wrap\" or remove it'\n            });\n          }\n          b = b[req.query.wrap];\n        }\n        if (b && b.length) {\n          var itemsCount = b.length;\n          createOrUpdateItem(b, req.query.ref)\n          .then(function (done) {\n            if (done) {\n              return res.json({no: itemsCount});\n            }\n          }, function (err) {\n            return next(err);\n          });\n        } else {\n          res.status(400).json({\n            error: 1,\n            message: 'Request expects a Array-like response',\n            tip: 'Respond with array of objects [{object}, {Object}]'\n          });\n        }\n    })\n  });\n\n  //dummy routes to test data\n  //\n  //items\n  //suppliers\n  //low items\n\n\n};",
+			"file": "app/controllers/hmis.js",
+			"file_size": 4618,
+			"file_write_time": 130826359144730613,
+			"settings":
+			{
+				"buffer_size": 6010,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/bridge.js",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/orders/add.jade",
+			"settings":
+			{
+				"buffer_size": 6599,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/items.js",
+			"settings":
+			{
+				"buffer_size": 8218,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/js/modules/item/item.js",
+			"settings":
+			{
+				"buffer_size": 23428,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "config/default.json",
+			"settings":
+			{
+				"buffer_size": 1064,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/css/app.css",
+			"settings":
+			{
+				"buffer_size": 16595,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/models/item/item-schema.js",
+			"settings":
+			{
+				"buffer_size": 5754,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/JSLint/JSLint.sublime-build",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 400.0,
+		"last_filter": "ins",
+		"selected_items":
+		[
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"snipp",
+				"Snippet: qdefer"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"Snippet: ",
+				"Snippet: notify"
+			],
+			[
+				"Snippet: not",
+				"Snippet: notify"
+			],
+			[
+				"packa",
+				"Package Control: List Packages"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Remove Package"
+			],
+			[
+				"lint",
+				"Preferences: SublimeLinter Settings – Default"
+			],
+			[
+				"",
+				"Code Folding: Fold Tag Attributes"
+			],
+			[
+				"Package Control: ",
+				"Package Control: List Packages"
+			],
+			[
+				"git",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 598.0
+	},
+	"console":
+	{
+		"height": 125.0,
+		"history":
+		[
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": true,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/home/integrabuntu/Projects/Integra",
+		"/home/home/integrabuntu/Projects/Integra/app/controllers",
+		"/home/home/integrabuntu/Projects/Integra/app/models",
+		"/home/home/integrabuntu/Projects/Integra/app/models/item",
+		"/home/home/integrabuntu/Projects/Integra/app/views",
+		"/home/home/integrabuntu/Projects/Integra/app/views/orders",
+		"/home/home/integrabuntu/Projects/Integra/config",
+		"/home/home/integrabuntu/Projects/Integra/public/js",
+		"/home/home/integrabuntu/Projects/Integra/public/js/modules",
+		"/home/home/integrabuntu/Projects/Integra/public/js/modules/item",
+		"/home/home/integrabuntu/Projects/Integra/public/js/modules/order"
+	],
+	"file_history":
+	[
+		"/home/home/integrabuntu/Projects/Integra/app/models/dsitem.js",
+		"/home/home/integrabuntu/Projects/Integra/app/views/index.jade",
+		"/home/home/integrabuntu/Projects/Integra/app/views/layouts/default.jade",
+		"/home/home/integrabuntu/Projects/Integra/app/views/admin/index.jade",
+		"/home/home/integrabuntu/Projects/Integra/package.json",
+		"/home/home/integrabuntu/Projects/Integra/app/controllers/hmis.js",
+		"/home/home/integrabuntu/Projects/Integra/public/js/modules/order/order.js",
+		"/home/home/integrabuntu/Projects/Integra/config/default.json",
+		"/home/home/integrabuntu/Projects/Integra/app/models/item/item-schema.js",
+		"/home/home/integrabuntu/Projects/Integra/public/css/app.css",
+		"/home/home/integrabuntu/Projects/Integra/todo.todo",
+		"/home/home/integrabuntu/Projects/Integra/app/models/user/supplier-schema.js",
+		"/home/home/integrabuntu/Projects/Integra/app/views/home/index.jade",
+		"/home/home/integrabuntu/Projects/Integra/public/js/app.js",
+		"/home/home/integrabuntu/Projects/Integra/server.js",
+		"/home/home/bootvm/php-www/predict.php",
+		"/home/home/bootvm/php-www/engine/coreengine.php",
+		"/home/home/integrabuntu/Projects/Integra/app/routes.js",
+		"/home/home/integrabuntu/Projects/Integra/app/views/includes/dialogs/bills/view.jade",
+		"/home/home/integrabuntu/Projects/Integra/app/views/orders/add.jade",
+		"/home/home/integrabuntu/Projects/Integra/app/views/includes/modals/modal-order-supplied.jade",
+		"/home/home/integrabuntu/Projects/Integra/app/controllers/orders.js",
+		"/home/home/integrabuntu/Projects/Integra/app/models/order.js",
+		"/home/home/integrabuntu/Projects/Integra/app/views/orders/cart.jade",
+		"/home/home/integrabuntu/Projects/Integra/app/models/item.js",
+		"/home/home/integrabuntu/Projects/Integra/app/views/items/edit.jade",
+		"/home/home/integrabuntu/Projects/Integra/app/views/items/dispense.jade",
+		"/home/home/integrabuntu/Projects/Integra/app/views/includes/modals/modal-order-history.jade",
+		"/home/home/integrabuntu/Projects/Integra/public/js/modules/dispense/dispense.js",
+		"/home/home/integrabuntu/Projects/Integra/app/views/items/new.jade",
+		"/home/home/integrabuntu/Projects/Integra/public/js/modules/lang.js",
+		"/home/home/integrabuntu/Projects/Integra/public/js/common/directives/directives.js",
+		"/home/home/integrabuntu/Projects/Integra/app/views/articles/new.jade",
+		"/home/home/integrabuntu/Projects/Integra/app/views/includes/dialogs/order/modal-tag-ds-product.jade",
+		"/home/home/integrabuntu/Projects/Integra/app/views/includes/dialogs/stock/modal-request-stock.jade",
+		"/home/home/integrabuntu/Projects/Integra/app/views/includes/modals/dispensary/modal-success.jade",
+		"/home/home/integrabuntu/Projects/Integra/public/js/modules/item/item.js",
+		"/home/home/integrabuntu/Projects/Integra/app/views/items/index.jade",
+		"/home/home/integrabuntu/Projects/Integra/app/views/templates/order-list.jade",
+		"/home/home/integrabuntu/Projects/Integra/app/views/orders/all.jade",
+		"/home/home/integrabuntu/Projects/Integra/public/js/common/services/services.js",
+		"/home/home/integrabuntu/Projects/Integra/app/models/dispense.js",
+		"/home/home/integrabuntu/Projects/Integra/app/models/bill.js",
+		"/home/home/integrabuntu/Projects/Integra/app/models/stock/bill-schema.js",
+		"/home/home/integrabuntu/Projects/Integra/app/views/templates/bill-print-tpl.jade",
+		"/home/home/integrabuntu/Projects/Integra/app/views/templates/admin-bill-profile-tpl.jade",
+		"/home/home/integrabuntu/Projects/Integra/app/models/stock/dispense-schema.js",
+		"/home/home/integrabuntu/Projects/Integra/app/controllers/items.js",
+		"/home/home/integrabuntu/Projects/Integra/app/views/includes/foot.jade",
+		"/home/home/integrabuntu/Projects/Integra/public/css/app.3.css",
+		"/home/home/integrabuntu/Projects/Integra/app/views/includes/items/item-summary-pane.jade",
+		"/home/home/integrabuntu/Projects/Integra/app/views/includes/items/quick-order-pane.jade",
+		"/home/home/integrabuntu/Projects/Integra/public/js/modules/keycodes.js",
+		"/home/home/integrabuntu/Projects/Integra/app/views/includes/inventory-side-pane.jade",
+		"/home/home/integrabuntu/Projects/Integra/public/css/app.min.2.css",
+		"/home/home/integrabuntu/Projects/Integra/public/css/app.min.1.css",
+		"/home/home/integrabuntu/Projects/Integra/app/views/includes/items/stock-histoy-pane.jade",
+		"/home/home/integrabuntu/Projects/Integra/app/controllers/bills.js",
+		"/home/home/integrabuntu/Projects/Integra/public/js/index.js",
+		"/home/home/integrabuntu/Projects/Integra/app/views/includes/sidebar.jade",
+		"/home/home/integrabuntu/Projects/Integra/new template/v1-3-1/index.html",
+		"/home/home/integrabuntu/Projects/Integra/app/views/includes/dialogs/items/category.jade",
+		"/home/home/integrabuntu/Projects/Integra/new template/v1-3-1/components.html",
+		"/home/home/integrabuntu/Projects/Integra/new template/20150522152251/components.html",
+		"/home/home/integrabuntu/Projects/Integra/app/views/includes/chat.jade",
+		"/home/home/integrabuntu/Projects/Integra/new template/v1-3-1/colors.html",
+		"/home/home/integrabuntu/Projects/Integra/app/views/includes/head.jade",
+		"/home/home/integrabuntu/Projects/Integra/public/js/modules/reports/reports.js",
+		"/home/home/integrabuntu/Projects/Integra/public/js/modules/stock/stock.js",
+		"/home/home/integrabuntu/Projects/Integra/public/js/modules/supplier/supplier.js",
+		"/home/home/integrabuntu/Projects/Integra/public/js/modules/bills/bills.js",
+		"/home/home/integrabuntu/Projects/Integra/public/js/modules/dashboard/dashboard.js",
+		"/home/home/integrabuntu/Projects/Integra/public/js/modules/admin/admin.js",
+		"/home/home/integrabuntu/Projects/Integra/app/controllers/admin.js",
+		"/home/home/bootvm/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/home/integrabuntu/Projects/Integra/app/models/dsitem/dsitem.js",
+		"/home/home/integrabuntu/Projects/Integra/new template/20150522152251/notification-dialog.css",
+		"/home/home/integrabuntu/Projects/Integra/app/models/supplier.js",
+		"/home/home/integrabuntu/Projects/Integra/app/models/admin.js",
+		"/home/home/integrabuntu/Projects/Integra/app/views/templates/admin-configuration-tpl.jade",
+		"/home/home/integrabuntu/Projects/Integra/lib/smsSend.js",
+		"/home/home/integrabuntu/Projects/Integra/app/controllers/suppliers.js",
+		"/home/home/integrabuntu/Projects/Integra/config/development.json",
+		"/home/home/integrabuntu/Projects/Integra/app/views/includes/modals/items/modal-item.jade",
+		"/home/home/bootvm/.config/sublime-text-3/Packages/User/SublimeLinter.sublime-settings",
+		"/home/home/integrabuntu/Projects/Integra/config/production.json",
+		"/home/home/integrabuntu/Projects/Integra/app/models/stock.js",
+		"/home/home/integrabuntu/Projects/Integra/app/views/reports/dashboard.jade",
+		"/home/home/integrabuntu/Projects/Integra/app/views/reports/location.jade",
+		"/home/home/integrabuntu/Projects/Integra/app/models/_dsitem",
+		"/home/home/integrabuntu/Projects/Integra/app/models/stock/order-schema.js",
+		"/home/home/integrabuntu/Projects/Integra/public/js/printThis.js",
+		"/home/home/integrabuntu/Projects/Integra/app/controllers/stock.js",
+		"/home/home/integrabuntu/Projects/Integra/app/views/items/stockdown.jade",
+		"/home/home/integrabuntu/Projects/Integra/app/models/transaction.js",
+		"/home/home/integrabuntu/Projects/Integra/app/models/stock/stockcount-schema.js",
+		"/home/home/bootvm/.config/sublime-text-3/Packages/PlainTasks/messages/Tutorial.todo",
+		"/home/home/bootvm/.cache/.fr-o2pcOV/jQuery-Plugin-To-Print-Any-Part-Of-Your-Page-Print/README.md",
+		"/home/home/integrabuntu/Projects/Integra/app/models/stock/stockhistory-schema.js",
+		"/home/home/integrabuntu/Projects/Integra/public/js/jquery.PrintArea.js",
+		"/home/integrabuntu/Downloads/google.csv",
+		"/home/integrabuntu/Projects/Integra/app/models/stock/dispense-schema.js",
+		"/home/integrabuntu/Projects/Integra/app/models/stock/bill-schema.js",
+		"/home/integrabuntu/Projects/Integra/app/controllers/orders.js",
+		"/home/integrabuntu/Projects/Integra/public/js/modules/order/order.js",
+		"/home/integrabuntu/Projects/Integra/public/js/modules/item/item.js",
+		"/home/integrabuntu/Projects/Integra/app/views/templates/order-list.jade",
+		"/home/integrabuntu/Projects/Integra/public/js/common/directives/directives.js",
+		"/home/integrabuntu/Projects/Integra/app/controllers/items.js",
+		"/home/integrabuntu/Projects/Integra/app/views/admin/index.jade",
+		"/home/integrabuntu/Projects/Integra/app/models/transaction.js",
+		"/home/integrabuntu/Projects/Integra/app/controllers/transactions.js",
+		"/home/integrabuntu/.config/sublime-text-3/Packages/PlainTasks/messages/Tutorial.todo",
+		"/home/integrabuntu/Projects/Integra/app/views/items/new.jade",
+		"/home/integrabuntu/Projects/Integra/todo.todo",
+		"/home/integrabuntu/Projects/Integra/app/models/supplier.js",
+		"/home/integrabuntu/Projects/Integra/app/views/items/index.jade",
+		"/home/integrabuntu/Projects/Integra/app/models/stock/order-schema.js",
+		"/home/integrabuntu/Projects/Integra/app/models/order.js",
+		"/home/integrabuntu/Projects/Integra/public/js/modules/lang.js",
+		"/home/integrabuntu/Projects/Integra/public/css/app.css",
+		"/home/integrabuntu/Projects/Integra/public/css/flat-ui.css",
+		"/home/integrabuntu/Projects/Integra/app/views/includes/header.jade",
+		"/home/integrabuntu/Projects/Integra/app/views/orders/add.jade",
+		"/home/integrabuntu/Projects/Integra/app/views/orders/cart.jade",
+		"/home/integrabuntu/Projects/Integra/app/views/includes/foot.jade",
+		"/home/integrabuntu/Projects/Integra/public/css/extra/modal/component.css",
+		"/home/integrabuntu/Projects/Integra/todo"
+	],
+	"find":
+	{
+		"height": 55.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/home/home/integrabuntu/Projects/Integra/app/views",
+			"<project>",
+			"/home/home/integrabuntu/Projects/Integra/public/js/modules",
+			"/home/home/integrabuntu/Projects/Integra/app/views",
+			"/home/integrabuntu/Projects/Integra/app/models",
+			"/home/integrabuntu/Projects/Integra/public/js",
+			"/home/integrabuntu/Projects/Integra/app/models",
+			"/home/integrabuntu/Projects/Integra/app/controllers",
+			"/home/integrabuntu/Projects/Integra/app",
+			"/home/kingkoded/Projects/Integra/public/js",
+			"/var/www/html/drugstoc/wp-content/themes/sistina",
+			"/home/kingkoded/Integra/stoc-cloud/models",
+			"/home/kingkoded/Integra/stoc-cloud/views",
+			"/home/kingkoded/Integra/stoc-cloud/build",
+			"/home/kingkoded/Integra/stoc-cloud/models",
+			"/home/kingkoded/Integra/stoc-cloud/controllers",
+			"/home/kingkoded/Integra/stoc-cloud/models",
+			"/home/kingkoded/Integra/stoc-cloud/views",
+			"/home/kingkoded/Integra/stoc-cloud/controllers",
+			"/home/kingkoded/Integra/stoc-cloud/public/js/modules",
+			"/home/kingkoded/Integra/stoc-cloud/public/js",
+			"/home/kingkoded/Projects/IntegraSup/public/js",
+			"/home/kingkoded/Projects/IntegraSup",
+			"/home/kingkoded/Projects/IntegraSup/public/js",
+			"/home/kingkoded/Projects/Integra/public/js/toPDF",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"label",
+			"before",
+			"concrete",
+			"silver",
+			"clouds",
+			"postOrders",
+			"slice",
+			"splice",
+			"slice",
+			"remove",
+			"type-ahead",
+			"scope",
+			"type-ahead",
+			"typeahead",
+			"brand-name-type-ahead",
+			"unitQuantity",
+			"amount",
+			"Number",
+			"printOrderToSupplier",
+			"href",
+			"other",
+			"stockFilters",
+			"view.",
+			"view",
+			"view.",
+			"#chat",
+			"commons.",
+			"button",
+			"summary",
+			"href",
+			"split",
+			"-fluid",
+			"routeParams",
+			"span",
+			"span10",
+			"span",
+			"span4",
+			"span6",
+			"href",
+			"routeProvider",
+			"when",
+			"routeProvider",
+			"when",
+			"stateProvider",
+			"routeProvider",
+			"when",
+			"routeProvider",
+			"when",
+			"routeProvider",
+			"saved item",
+			"[num]",
+			"products",
+			"this",
+			"''",
+			"last_name",
+			"not",
+			"supplierNameTy",
+			"supplier-ty",
+			"form.suppliers",
+			"modal-order-supplied",
+			"packageSize",
+			"upload",
+			"*",
+			".on",
+			"itemPackaging",
+			"findDrugstocProductById",
+			"DsItem",
+			"Order",
+			"OrderSchema",
+			"Item",
+			"supplyOrder",
+			"Items",
+			"DsItems",
+			"Items",
+			"ItemsObject",
+			"/api/bills/d",
+			"class",
+			"200, ",
+			"orderLi",
+			"Lato",
+			"font",
+			"lato",
+			"googleapis",
+			";\n",
+			"selectedItem",
+			"'Location'",
+			"Location",
+			"postOrders",
+			"SupplierController",
+			"DsItem",
+			"DsItemsModel",
+			"DsItem",
+			"\"",
+			"OrderController",
+			"SupplierModel.",
+			"SupplierController",
+			"(req",
+			"./models",
+			"TransactionController",
+			"models",
+			"../",
+			"Item",
+			"NafdacDrugsModel",
+			"(req",
+			"res",
+			"Location",
+			"span4",
+			"req.query.s,",
+			"req.query.s",
+			"findItem",
+			"findDrugstocProduct",
+			"findDrugstocProductById",
+			"findDrugstocProduct",
+			"search",
+			"selectedItem",
+			"requestform.request[$index]",
+			"item.",
+			"item",
+			"newModal",
+			"modal",
+			"btn",
+			"updateOrder",
+			"orderList[index]",
+			"orderInvoice",
+			"orderList[index].",
+			"orderList[index]",
+			"ng-rep",
+			"Items"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"#sidepane",
+			"",
+			"stateParams",
+			"",
+			"OpenSans Regular",
+			"'",
+			"OrderModel",
+			"SupplierModel",
+			"TransactionModel",
+			"'",
+			"span",
+			"item",
+			"'",
+			"saveProductUpdates",
+			"runProductUpdateRequest",
+			"DS_CLOUD_URL",
+			"'",
+			"DrugStoc",
+			"<br />",
+			"animate.css",
+			"'",
+			"apiConfig.url + '/api",
+			"'",
+			"\"",
+			"'",
+			",",
+			"",
+			"/api/internal/",
+			"__modal_data",
+			"/images/",
+			"'",
+			"PostmanController",
+			"",
+			"\"",
+			"updateItem($data, $editable.name)",
+			"onbeforesave=\"update_profile($data, $editable.name)\", editable-",
+			" || 'Empty'}}",
+			"editable-text=\"userProfile.",
+			"}}",
+			"{{",
+			"onbeforesave=\"updateItem($data)\", editable-",
+			"onbeforesave=\"updateItem($data)\", editable",
+			" || 'Empty'}}",
+			"text-area",
+			"row",
+			"editable-text=\"item.",
+			"}}",
+			"{{",
+			"/api/internal/",
+			"400, err.message",
+			"",
+			"'",
+			"p.x-editable.",
+			"form-control-static",
+			"p",
+			"placeholder=''",
+			"String, default: ",
+			"data-name",
+			"./",
+			"col-md-",
+			"_d",
+			"option",
+			"item",
+			"",
+			"png",
+			"",
+			"util",
+			"self",
+			"data.",
+			"NdlController",
+			"'",
+			"src='/",
+			"n_w",
+			"",
+			"scope.kush",
+			"",
+			"itemBody",
+			"",
+			"commons.href",
+			"angular.module('filters')",
+			"angular.module('directives')"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "app/views/items/index.jade",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6044,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": true,
+							"WordCountSyntax": "jade",
+							"color_scheme": "Packages/User/Color Highlighter/themes/predawn (SL).tmTheme",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 273.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/controllers/hmis.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6010,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5918,
+								5918
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": false,
+							"WordCountSyntax": "javascript",
+							"auto_complete": false,
+							"color_scheme": "Packages/User/Color Highlighter/themes/predawn (SL).tmTheme",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2322.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/controllers/bridge.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": false,
+							"WordCountSyntax": "javascript",
+							"color_scheme": "Packages/User/Color Highlighter/themes/predawn (SL).tmTheme",
+							"incomplete_sync": null,
+							"open_with_edit": true,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/views/orders/add.jade",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6599,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3765,
+								3765
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": true,
+							"WordCountSyntax": "jade",
+							"color_scheme": "Packages/User/Color Highlighter/themes/predawn (SL).tmTheme",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 192.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/controllers/items.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8218,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3324,
+								3324
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": false,
+							"WordCountSyntax": "javascript",
+							"auto_complete": false,
+							"color_scheme": "Packages/User/Color Highlighter/themes/predawn (SL).tmTheme",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1920.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 5,
+					"file": "public/js/modules/item/item.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 23428,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								653,
+								653
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": false,
+							"WordCountSyntax": "javascript",
+							"auto_complete": false,
+							"color_scheme": "Packages/User/Color Highlighter/themes/predawn (SL).tmTheme",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 128.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "config/default.json",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 1064,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								616,
+								616
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": false,
+							"WordCountSyntax": "json",
+							"color_scheme": "Packages/User/Color Highlighter/themes/predawn (SL).tmTheme",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "public/css/app.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 16595,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": false,
+							"WordCountSyntax": "css",
+							"color_scheme": "Packages/User/Color Highlighter/themes/predawn (SL).tmTheme",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3921.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "app/models/item/item-schema.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5754,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								725,
+								725
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": false,
+							"WordCountSyntax": "javascript",
+							"color_scheme": "Packages/User/Color Highlighter/themes/predawn (SL).tmTheme",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 48.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.575618345846,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 65.0
+	},
+	"output.find_results":
+	{
+		"height": 92.0
+	},
+	"output.git":
+	{
+		"height": 100.0
+	},
+	"output.sftp":
+	{
+		"height": 100.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 80.0
+	},
+	"pinned_build_system": "",
+	"project": "integra.sublime-project",
+	"replace":
+	{
+		"height": 106.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"app.css",
+				"public/css/app.css"
+			],
+			[
+				"bill/view",
+				"app/views/includes/dialogs/bills/view.jade"
+			],
+			[
+				"ds",
+				"app/models/dsitem.js"
+			],
+			[
+				"app/model/order",
+				"app/models/order.js"
+			],
+			[
+				"app.js",
+				"public/js/app.js"
+			],
+			[
+				"pub/ord",
+				"public/js/modules/order/order.js"
+			],
+			[
+				"cart",
+				"app/views/orders/cart.jade"
+			],
+			[
+				"lang",
+				"public/js/modules/lang.js"
+			],
+			[
+				"todo",
+				"todo.todo"
+			],
+			[
+				"edit",
+				"app/views/items/edit.jade"
+			],
+			[
+				"new.jade",
+				"app/views/items/new.jade"
+			],
+			[
+				"dispe.jad",
+				"app/views/items/dispense.jade"
+			],
+			[
+				"directi",
+				"public/js/common/directives/directives.js"
+			],
+			[
+				"pub/disp",
+				"public/js/modules/dispense/dispense.js"
+			],
+			[
+				"disp.ja",
+				"app/views/items/dispense.jade"
+			],
+			[
+				"item/inde",
+				"app/views/items/index.jade"
+			],
+			[
+				"order-li",
+				"app/views/templates/order-list.jade"
+			],
+			[
+				"all.jade",
+				"app/views/orders/all.jade"
+			],
+			[
+				"cart.jade",
+				"app/views/orders/cart.jade"
+			],
+			[
+				"app",
+				"public/js/app.js"
+			],
+			[
+				"stock",
+				"app/views/includes/dialogs/stock/modal-request-stock.jade"
+			],
+			[
+				"app/mode/ite",
+				"app/models/item.js"
+			],
+			[
+				"directive",
+				"public/js/common/directives/directives.js"
+			],
+			[
+				"public/ite",
+				"public/js/modules/item/item.js"
+			],
+			[
+				"bill.jade",
+				"app/views/templates/bill-print-tpl.jade"
+			],
+			[
+				"model/dis",
+				"app/models/dispense.js"
+			],
+			[
+				"model/bill",
+				"app/models/bill.js"
+			],
+			[
+				"modalre",
+				"app/views/includes/dialogs/stock/modal-request-stock.jade"
+			],
+			[
+				"modal",
+				"app/views/includes/modals/modal-order-supplied.jade"
+			],
+			[
+				"new.ja",
+				"app/views/items/new.jade"
+			],
+			[
+				"bill",
+				"app/models/bill.js"
+			],
+			[
+				"models/items",
+				"app/models/item.js"
+			],
+			[
+				"items",
+				"app/controllers/items.js"
+			],
+			[
+				"modal-order",
+				"app/views/includes/modals/modal-order-supplied.jade"
+			],
+			[
+				"public/order",
+				"public/js/modules/order/order.js"
+			],
+			[
+				"public/dis",
+				"public/js/modules/dispense/dispense.js"
+			],
+			[
+				"app.j",
+				"public/js/app.js"
+			],
+			[
+				"app.3",
+				"public/css/app.3.css"
+			],
+			[
+				"foot",
+				"app/views/includes/foot.jade"
+			],
+			[
+				"public/index.",
+				"public/js/index.js"
+			],
+			[
+				"compo",
+				"new template/20150522152251/components.html"
+			],
+			[
+				"cate",
+				"app/views/includes/dialogs/items/category.jade"
+			],
+			[
+				"colo",
+				"new template/v1-3-1/colors.html"
+			],
+			[
+				"public/orders",
+				"public/js/modules/order/order.js"
+			],
+			[
+				"head",
+				"app/views/includes/head.jade"
+			],
+			[
+				"foot.jade",
+				"app/views/includes/foot.jade"
+			],
+			[
+				"nod",
+				"new template/20150522152251/notification-dialog.css"
+			],
+			[
+				"dispe",
+				"app/models/stock/dispense-schema.js"
+			],
+			[
+				"disp",
+				"public/js/modules/dispense/dispense.js"
+			],
+			[
+				"dsite",
+				"app/models/dsitem.js"
+			],
+			[
+				"modal-item",
+				"app/views/includes/modals/items/modal-item.jade"
+			],
+			[
+				"dsitems",
+				"app/models/dsitem.js"
+			],
+			[
+				"order",
+				"app/models/order.js"
+			],
+			[
+				"modal-succ",
+				"app/views/includes/modals/dispensary/modal-success.jade"
+			],
+			[
+				"module/order",
+				"public/js/modules/order/order.js"
+			],
+			[
+				"modal-order-supplied",
+				"app/views/includes/modals/modal-order-supplied.jade"
+			],
+			[
+				"cart.",
+				"app/views/orders/cart.jade"
+			],
+			[
+				"stock.jade",
+				"app/views/includes/dialogs/stock/modal-request-stock.jade"
+			],
+			[
+				"disp.jade",
+				"app/views/items/dispense.jade"
+			],
+			[
+				"route",
+				"app/routes.js"
+			],
+			[
+				"ser",
+				"server.js"
+			],
+			[
+				"routes",
+				"app/routes.js"
+			],
+			[
+				"serv",
+				"server.js"
+			],
+			[
+				"module/disp",
+				"public/js/modules/dispense/dispense.js"
+			],
+			[
+				"direct",
+				"public/js/common/directives/directives.js"
+			],
+			[
+				"stock.j",
+				"app/views/includes/dialogs/stock/modal-request-stock.jade"
+			],
+			[
+				"item/new",
+				"app/views/items/new.jade"
+			],
+			[
+				"bills/view",
+				"app/views/includes/dialogs/bills/view.jade"
+			],
+			[
+				"modules/disp",
+				"public/js/modules/dispense/dispense.js"
+			],
+			[
+				"contr/order",
+				"app/controllers/orders.js"
+			],
+			[
+				"models/tr",
+				"app/models/transaction.js"
+			],
+			[
+				"contro/tr",
+				"app/controllers/transactions.js"
+			],
+			[
+				"models/supl",
+				"app/models/supplier.js"
+			],
+			[
+				"lang.js",
+				"public/js/modules/lang.js"
+			],
+			[
+				"flat-ui",
+				"public/css/flat-ui.css"
+			],
+			[
+				"modal/comp",
+				"public/css/extra/modal/component.css"
+			],
+			[
+				"modal-ta",
+				"app/views/includes/dialogs/order/modal-tag-ds-product.jade"
+			],
+			[
+				"add.jade",
+				"app/views/orders/add.jade"
+			],
+			[
+				"modal-re",
+				"app/views/includes/dialogs/order/modal-tag-ds-product.jade"
+			],
+			[
+				"new",
+				"app/views/items/new.jade"
+			],
+			[
+				"order/all",
+				"app/views/orders/all.jade"
+			],
+			[
+				"app.",
+				"public/css/app.css"
+			],
+			[
+				"views/item/edi",
+				"app/views/items/edit.jade"
+			],
+			[
+				"views/item",
+				"app/views/items/new.jade"
+			],
+			[
+				"modal-stoc",
+				"app/views/includes/dialogs/stock/modal-request-stock.jade"
+			],
+			[
+				"contro/sto",
+				"app/controllers/stock.js"
+			],
+			[
+				"css-",
+				"public/js/extra/modal/css-filters-polyfill.js"
+			],
+			[
+				"controllers/ite",
+				"app/controllers/items.js"
+			],
+			[
+				"cart.jad",
+				"app/views/orders/cart.jade"
+			],
+			[
+				"public/item",
+				"public/js/modules/item/item.js"
+			],
+			[
+				"direc",
+				"public/js/common/directives/directives.js"
+			],
+			[
+				"app.c",
+				"public/css/app.css"
+			],
+			[
+				"lodash",
+				"public/js/lodash.min.js"
+			],
+			[
+				"admin",
+				"Integra/app/controllers/admin.js"
+			],
+			[
+				"suppl",
+				"Integra/app/controllers/suppliers.js"
+			],
+			[
+				"control/items",
+				"Integra/app/controllers/items.js"
+			],
+			[
+				"orders.js",
+				"Integra/app/controllers/orders.js"
+			],
+			[
+				"pureauto",
+				"Integra/node_modules/mongoose-pureautoinc/lib/pureautoinc.js"
+			],
+			[
+				"locat",
+				"Integra/app/models/location.js"
+			],
+			[
+				"model/order",
+				"stoc-cloud/models/order.js"
+			],
+			[
+				"postman",
+				"stoc-cloud/models/postman.js"
+			],
+			[
+				"uplo",
+				"stoc-cloud/controllers/upload.js"
+			],
+			[
+				"rout",
+				"stoc-cloud/controllers/routes.js"
+			],
+			[
+				"side",
+				"stoc-cloud/views/includes/side-nav.jade"
+			],
+			[
+				"email/sen",
+				"stoc-cloud/lib/email/sendMail.js"
+			],
+			[
+				"sendm",
+				"stoc-cloud/test/email/sendMailSpec.js"
+			],
+			[
+				"drug",
+				"stoc-cloud/views/widgets/profile/drug-pages.jade"
+			],
+			[
+				"all-ca",
+				"stoc-cloud/views/widgets/order/all-cart.jade"
+			],
+			[
+				"models/i",
+				"stoc-cloud/models/item.js"
+			],
+			[
+				"default",
+				"stoc-cloud/views/layouts/default.jade"
+			],
+			[
+				"drug/index",
+				"stoc-cloud/views/drug/index.jade"
+			],
+			[
+				"all",
+				"stoc-cloud/views/widgets/item/all-drugs.jade"
+			],
+			[
+				"build/order",
+				"stoc-cloud/build/js/modules/order/order.js"
+			],
+			[
+				"order/order",
+				"stoc-cloud/models/order/order.js"
+			],
+			[
+				"build/user",
+				"stoc-cloud/build/js/modules/user/user.js"
+			],
+			[
+				"drugp",
+				"stoc-cloud/dist/widgets/profile/drug-pages.html"
+			],
+			[
+				"alter",
+				"stoc-cloud/views/widgets/admin/alter-order-modal.jade"
+			],
+			[
+				"server",
+				"stoc-cloud/server.js"
+			],
+			[
+				"def",
+				"stoc-cloud/views/layouts/default.jade"
+			],
+			[
+				"user",
+				"stoc-cloud/views/admin/user.jade"
+			],
+			[
+				"user/user",
+				"stoc-cloud/models/user/user.js"
+			],
+			[
+				"ui-boot",
+				"stoc-cloud/build/js/ui-bootstrap-custom-tpls-0.10.0.min.js"
+			],
+			[
+				"grunt",
+				"stoc-cloud/gruntfile.js"
+			],
+			[
+				"note",
+				"stoc-cloud/views/templates/email-templates/order-note.jade"
+			],
+			[
+				"send",
+				"stoc-cloud/lib/email/sendMail.js"
+			],
+			[
+				"order-no",
+				"stoc-cloud/views/templates/email-templates/order-note.jade"
+			],
+			[
+				"postma",
+				"stoc-cloud/models/postman.js"
+			],
+			[
+				"b/admin",
+				"stoc-cloud/build/js/modules/admin/admin.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"/var/www/html/betright.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 210.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -1,0 +1,93 @@
+append head
+  link(rel='stylesheet', href='/css/extra/timeline/component.css')
+
+nav.shpane.cbp-spmenu.cbp-spmenu-vertical.cbp-spmenu-right(ng-class="spmenu",ng-style="a2cpane")
+  h3(style="") Add to cart
+  form.cart-order(role="form", ng-submit="addToCart(summary)", style="padding: 5px", name="cartorder")
+    label Quantity
+    input(type="number", ng-model="summary.orderAmount", required)
+    //
+      label Purchase Price: <b>{{summary.itemPurchaseRate}}</b>
+      label Order Price
+      input(type="number", ng-model="sdprice", ng-required="!summary.itemPurchaseRate")
+    label Current Supplier: <b>{{summary.suppliers[0].supplierName}}</b>
+    label(ng-hide="summary.isDrugStocOrder", style="color: #ddd") Change Supplier
+    input(type="text", placeholder="Supplier", cart-supplier, ng-model="summary.orderSupplier.supplierName", ng-required="!summary.suppliers.length && !summary.dsPurchaseRate", ng-hide="summary.isDrugStocOrder")
+    button.btn.btn-bell.btn-block(type="submit" ng-click="summary.supplierSelected = 'drugstoc'", ng-disabled="cartorder.$invalid || !summary.dsPurchaseRate", ng-show="summary.isDrugStocOrder") Order from DrugStoc
+    button.btn.btn-warning.btn-block(type="submit", ng-disabled="cartorder.$invalid", ng-hide="summary.isDrugStocOrder") Add to Cart
+nav.shpane.cbp-spmenu.cbp-spmenu-vertical.cbp-spmenu-right(ng-class="spmenu",ng-style="shpane")
+  ul.cbp_tmtimeline.stup-hstry
+    li(ng-repeat="sh in shz")
+      time.cbp_tmtime(datetime="{{sh.date}}")
+        span  {{sh.date| date: 'fullDate'}}
+        span  {{sh.amount}}
+      i.cbp_tmicon.fa(ng-class="{'fa-level-up' : _stockDirection(sh), 'fa-level-down' : _stockDirection(sh) }")
+      .cbp_tmlabel
+        h4 {{sh.action}}
+        p <strong>At: </strong> {{sh.date| date:'shortTime'}}
+nav.shpane.cbp-spmenu.cbp-spmenu-vertical.cbp-spmenu-right(ng-class="spmenu",ng-style="aqpane")
+  h3 Search
+  div.summary
+    form#form-new-order.form-search(name="newOrder", novalidate, ng-submit="searchcmp(searchQuery, {'page' : 0})")
+      input#itemname.search-query(type="text",name="s",ng-model="searchQuery", required, placeholder="Item / Drug Name / Composition")
+      input(type="hidden" name="page" value="0")
+      <i ng-show="searching_icon" class="fa fa-spinner fa-pulse"></i>
+  div.summary(style="overflow-y: scroll;height: 100%;")
+    p.ds-sr(ng-repeat="ds in drugstocResults", ng-init="ds.show_prices = false")
+      span.label.label-warning(ng-click="ds.show_prices = !ds.show_prices") {{ds.suppliers.length}}
+      span.pr-title {{ds.title}}
+      a(href="", ng-click="bindAdd(sup, ds)", title="Buy From Supplier", ng-repeat="sup in ds.suppliers", ng-show="ds.show_prices", fetch-supplier-data="sup")
+        span.pr-supp {{sup.supplierName}}
+        span.pr-supp(ng-hide="sup.supplierName") {{sup.sid || 'DrugStoc'}}
+        span.pr-price N{{sup.price || 0}}
+
+nav.cbp-spmenu.cbp-spmenu-vertical.cbp-spmenu-right(ng-class="spmenu", ng-style="smpane")
+  h3 Item Summary
+  div.summary()
+    dl
+      dt Name
+      dd {{summary.itemName}}
+      dt Manufacturer
+      dd {{summary.manufacturerName}}
+      dt Current Stock
+      dd {{summary.currentStock}}
+      dt Last Order Date
+      dd {{summary.lastSupplyDate | date: 'medium'}}
+      dt Purchase Rate (N)
+      dd {{summary.itemPurchaseRate || 0}}
+  div.summary-actions
+    p
+      button.btn.btn-block.btn-warning(data-ng-click="commons.href('/items/'+summary._id+'/edit/iv-edit')") Edit Item
+    p
+      button.btn.btn-block.btn-warning(data-ng-click="addPane(); summary.isDrugStocOrder = false") Add to cart
+    p
+      button.btn.btn-block.btn-warning(ng-click="stockhistory(summary._id)") Stock History
+    p
+      button.btn.btn-block.btn-danger(data-ng-click="delConfirm = !delConfirm; delBtnText = 'Are you sure ?'", ng-init="delConfirm = true") {{delBtnText}}
+      div(ng-show="!delConfirm")
+        button.btn.btn-danger.btn-block(data-ng-click="deleteItem(summary._id)") Yes
+        button.btn.btn-inverse.btn-block(data-ng-click="delConfirm = true; delBtnText = 'Delete Item'") Cancel
+    p
+      button.btn.btn-block.btn-default.btn-close(data-ng-click="spmenu=''", ng-class="spmenu") Close
+
+.row-fluid.row-break
+  .span2.actioncol
+    .row-fluid
+      input.input-medium(type="search", ng-model="search", placeholder="Search Items")
+  .span10
+    .row-fluid
+      .panorama
+        .sectionAZ.panorama-sections(ng-show="hasItems")
+          .card-section.span6.panorama-section(data-ng-repeat="(key,az) in itemsList", id="section{{key}}", on-finish="panorama")
+            .card(data-ng-repeat="item in az  | orderBy:'itemName' | filter: search", class="{{item.currentStock | stockclass: item.itemBoilingPoint}}", data-ng-click="summaryDo($event, item)", on-finish="checkViewState")
+              h5 {{item.itemName}}
+              span.low {{item.currentStock}}
+        .no-item-holder(ng-show="!hasItems")
+          h4 No Items added.
+          a.btn.btn-primary(href="items/add") Add
+      .row-fluid.row-break
+        ul.index-list
+          li(data-ng-repeat="index in indexes", class="index {{enabledIndex | indexclass: index}}") {{index}}
+
+append foot
+  script(src="js/index.js")

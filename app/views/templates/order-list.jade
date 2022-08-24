@@ -1,0 +1,58 @@
+tr.order-row(ng-repeat="order in orderList | filter: ordersFilter", on-finish="tableheader")
+  td {{order.order_group_id}}
+  td
+    //
+      a(href="/items/{{order.itemData.id}}/edit") {{order.itemName}}
+    | {{order.itemName}}
+  td
+    | {{order.orderAmount}} <span style="color: grey">@ N{{order.orderPrice}}</span>
+  td {{order.orderAmount * order.orderPrice}}
+  td(title="{{order.orderDate | date:'medium'}}")
+    | {{order.orderDate | date:'shortDate'}}
+
+  td {{(order.isDrugStocOrder) ? 'DrugStoc' : order.orderSupplier.supplierName }}
+  td.order-status
+    .btn-group.dropdown(order-item-menu)
+      a.btn.btn-mini.btn-nobg(data-toggle="dropdown") {{order.orderStatus | orderState}}
+      a.btn.btn-dropdown-toggle.btn-nobg(data-toggle="dropdown")
+        span.caret
+      div.dropdown-menu.alt-text
+        p
+          | Please confirm the following <br>
+          | was supplied. <br>
+        dl
+          dt Item Ordered:
+          dd(style="color: #3498db") {{order.itemName}}
+
+        form.new-stock-down
+          .control-group
+            label.control-label Amount Supplied
+            .controls
+              input.input-medium.input-block-level(type="number",ng-model="order.amountSupplied", required)
+              span.help-block {{addHelpText}}
+          .control-group
+            label.control-label Invoice Number
+            .controls
+              input.input-medium.input-block-level(type="text",ng-model="order.orderInvoiceNumber", required)
+              span.help-block {{addHelpText}}
+          .control-group
+            label.control-label Payment Type
+            .controls
+              select.input-medium.input-block-level(type="text",ng-model="order.paymentReferenceType", ng-required="order.nextStatus() == 4")
+                option Cheque
+                option Cash
+                option Bank Transfer
+              span.help-block {{addHelpText}}
+          .control-group
+            label.control-label Reference ID
+            .controls
+              input.input-medium.input-block-level(type="text",ng-model="order.paymentReferenceID", ng-required="order.nextStatus() == 4", placeholder="Cheque No, Cash Slip ID or Transaction ID")
+              span.help-block {{addHelpText}}
+          .control-group
+            .controls
+              button.btn.btn-inverse.input-block-level(ng-click="updateOrder()" ng-disabled="order.orderBtnDisabled()" order-item-action-btn) {{order.nextStatus() | orderState | uppercase}}
+              button.btn.btn-danger.input-block-level(ng-click="cancelOrder()", ng-disabled="order.nextStatus() == 6") Cancel
+  td
+    .btn-group
+      //- a.btn.btn-mini Return
+      a.btn.btn-mini.btn-danger(ng-click="removeOrder($event, order._id)") <i class="icon-remove"></i>

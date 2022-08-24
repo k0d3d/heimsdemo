@@ -1,0 +1,138 @@
+block body
+  include ../includes/modals/modal.jade
+  include ../includes/dialogs/order/modal-tag-ds-product.jade
+  .row-fluid.row-break()
+    .span7
+        //
+          form#form-new-order.form-search(name="newOrder", novalidate, ng-submit="searchcmp(searchQuery, {'page' : 0})")
+        form#form-new-order.form-search(name="newOrder", novalidate, action="/dashboard/order")
+          input#itemname.span6.search-query(type="text",name="s",ng-model="searchQuery", required, placeholder="Item / Drug Name / Composition")
+          input(type="hidden" name="page" value="0")
+          button.btn.btn-primary(type="submit")
+            | Search
+            <i ng-show="searching_icon" class="fa fa-spinner fa-pulse"></i>
+    .span5
+      .btn-group.order-tabs.pull-right
+        button.btn(ng-click="activePane = 'iv'; activeText = 'your inventory'", ng-class="{'active': activePane == 'iv'}")
+          | Your Inventory
+          span.badge.badge-info {{inventoryCount || 0}}
+        button.btn(ng-click="activePane = 'ds'; activeText = 'DrugStoc'", ng-class="{'active': activePane == 'ds'}")
+          | DrugStoc
+          span.badge.badge-info {{drugstocCount || 0}}
+        button.btn(ng-click="activePane = 'nr'; activeText = 'the NAFDAC Register'", ng-class="{'active': activePane == 'nr'}")
+          | NAFDAC Register
+          span.badge.badge-info {{nafdacCount || 0}}
+
+
+  .row-fluid
+    .span12
+      p(style="text-transform: none", ng-show="inventoryResults.length || drugstocResults.length || nafdacResults.length") Viewing results from {{activeText}}
+      table.table.table-hover
+        thead(ng-show="activePane == 'iv'", style="border-top: solid 1px #fff")
+          tr
+            th Product
+            th
+            th Supplier
+            th Quantity
+            th
+        tbody(ng-show="activePane == 'iv'")
+          tr(ng-repeat="iv in inventoryResults | filter:product_id_filter")
+            td.span5
+              .media
+                .media-body
+                  h4.media-heading
+                    a(ng-href='/items/{{iv._id}}/edit/iv-edit') {{iv.itemName}}
+                    a.icon-match-ds(title="Available on DrugStoc", ng-click="$parent.activePane = 'ds'; $parent.activeText = 'DrugStoc'", cross-item-search-ds="iv", collection="drugstocResults")
+                        span.fa-stack(ng-show="iv.matching_ds_item")
+                          i.fa.fa-dot-circle-o.fa-stack-2x(style="color: #2281FD")
+                          i.fa.fa-circle.fa-stack-1x(style="color: #88BEFF")
+                  p.media-body
+                    span {{iv.sciName}}
+            td
+            td.span2
+              strong {{iv.suppliers[0].supplierName}} ( {{iv.suppliers.length}} )
+            td.span2
+              .controls.controls-row
+                input#exampleInputEmail1.form-control.pull-left.span10(type='number', ng-model="iv.orderAmount")
+            td.span3
+              button.btn.btn-mini.btn-block.btn-sky-blue(type='button', ng-click="orderItem(iv, 'sup')", ng-disabled="!iv.orderAmount && iv.suppliers.length", title="Order from Supplier")
+                //i.fa.fa-truck
+                | Order @ {{iv.itemPurchaseRate}} <i>from <strong>Supplier</strong></i>
+              button.btn.btn-mini.btn-block.btn-sky-blue(type='button', ng-click="orderItem(iv, 'ds')", ng-disabled="!iv.orderAmount && iv.product_id", title="Order from Drugstoc", ng-show="iv.dsPurchaseRate")
+                //i.fa.fa-cart-plus
+                | Order @ {{iv.dsPurchaseRate}} <i>from <strong>DrugStoc</strong></i>
+        tfoot(ng-show="activePane == 'iv'", style="border-top: solid 1px #fff")
+          tr
+            th(style="border-top: none")
+              .btn-group
+                button.btn Previous
+                button.btn Next
+        thead(ng-show="activePane == 'ds'")
+          tr
+            th Product
+            th Price (N)
+            th Last Update
+            th
+        tbody(ng-show="activePane == 'ds'")
+          tr(ng-repeat="ds in drugstocResults")
+            td.span6
+              .media
+                .media-body
+                  h4.media-heading
+                    | {{ds.title}}
+                    a.icon-match-ds(ng-show="ds.matching_iv_item", title="Linked to your inventory", ng-click="$parent.activePane = 'ds'; $parent.activeText = 'DrugStoc'", cross-item-search-iv="ds", collection="inventoryResults")
+                        span.label.label-info
+                          i.fa.fa-check-square
+                  p.media-body
+                    span(ng-bind-html="ds.description")
+            td.span1
+              strong {{ds.price}}
+            td.span1
+              strong {{ds.updated_at | date:medium}}
+            td.span2
+              .controls.controls-row
+                button.btn.btn-danger.btn-mini.pull-right(type='button', ng-click="set_ds_product(ds); order_by_ds_product(ds.product_id)") <i class="fa fa-cart-plus"></i> Add to Inventory
+
+              //
+                td
+                a.btn.btn-primary.btn-mini(type='button', ng-href="/items/{{ds._id}}/ds-add/ds-add")
+                  i.fa.fa-list-ol
+                a.btn.btn-bell.btn-mini(type='button', ng-click="set_ds_product(ds)" new-modal="#modal-tag-ds-product")
+                  i.fa.fa-tag
+        tfoot(ng-show="activePane == 'ds'", style="border-top: solid 1px #fff")
+          tr
+            th(style="border-top: none")
+              .btn-group
+                button.btn Previous
+                button.btn Next
+        thead(ng-show="activePane == 'nr'")
+          tr
+            th Product
+            th
+            th Manufacturer
+            th
+            th  
+        tbody(ng-show="activePane == 'nr'")
+          tr(ng-repeat="nr in nafdacResults")
+            td.span6
+              .media
+                .media-body
+                  h4.media-heading
+                    | {{nr.productName}}
+                  p.media-body
+                    span {{nr.composition}}
+            td
+
+            td.span1
+              strong {{nr.man_imp_supp}}
+            td(style='text-align: center')
+            td.span3
+              button.btn.btn-default.btn-mini(type='button', title="Send Inquiry")
+                i.fa.fa-info
+                |  Send Inquiry
+        tfoot(ng-show="activePane == 'nr'", style="border-top: solid 1px #fff")
+          tr
+            th(style="border-top: none")
+              .btn-group
+                button.btn(ng-click="skipSearch(searchQuery, currentPage.nafdac - 1 , 'nafdac')") Previous
+                button.btn(ng-click="skipSearch(searchQuery, currentPage.nafdac + 1, 'nafdac')") Next

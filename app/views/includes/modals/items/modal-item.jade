@@ -1,0 +1,8 @@
+#modal-1.md-modal.md-effect-6(ng-class="[modal.state.dialog, modal.class]")
+  .md-content
+      h3 {{modal.heading}}
+      div
+        p {{modal.body}}
+
+        button.md-close(ng-click="modal.close()") Close
+        button(ng-click="commons.href('/')") Dashboard 

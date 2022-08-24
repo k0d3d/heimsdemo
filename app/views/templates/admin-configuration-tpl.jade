@@ -1,0 +1,53 @@
+.row(style="margin-left: 20px", ng-controller="configController")
+  .span6
+    .well.options-well
+      h2 Application Configuration
+      hr
+      h4 Update Products
+      p
+        | Updates items available on DrugStoc with prices, product information and
+        | suppliers where applicable.
+      button.btn.btn-warning(ng-click="updateProduct()") Update
+      hr
+      h4 Reset
+      p
+        | Removes every entry from the database. This includes drug items and
+        | medical equipment, NAFDAC Registers, Orders, Order History, Stock
+        | Information and Stock-down locations, Bills and Dispenses, Supplier Data. <br><strong style="color: red">
+        | This process is not reversible</strong>
+      button.btn.btn-warning() Clear All
+      hr
+      h4 Flush and Update
+      p
+        | This will download updated DDIM data to this installation. It will
+        | reset and update NAFDAC Registers, Supplier Data and Drug Prices. Any
+        | records stored in these locations will be cleared and reloaded. This
+        | process requires an active internet connection. <br> <strong style="color: red"> This
+        | process is not reversible</strong>
+      button.btn.btn-warning Run Setup
+  .offset1.span5
+    .row
+      #setup.pane(ng-show="false")
+        h4 Progress
+        ul
+          li Creating Default Stock
+          li Populating Suppliers
+          li Populating NAFDAC Registers
+          li Updating Drug Prices
+          li Updating NAFDAC Register
+          li Updating List of Suppliers
+      #clear-records.pane(ng-show="false")
+        h4 Progress
+        ul
+          li Removing Suppliers
+          li Clearing NAFDAC Registers
+          li Removing All Drug items
+          li Removing All Medical equipment
+          li Deleting Stock Locations
+          li Deleting Stock Records
+      #restore-records.pane(ng-show="false")
+        h4 Progress
+        ul
+          li Creating Default Stock Stock
+          li Populating Suppliers
+          li Populating NAFDAC Registers

@@ -1,0 +1,30 @@
+div#frontpage.container-fluid
+  .row-fluid
+    .span2
+      .logo-block
+        a(href="/")
+          p
+          | LOGO
+      .clear-fix
+
+    .offset5.span5
+      .btn-toolbar.pull-right
+        .btn-group
+          button.btn.btn-bell.btn-small(type="button", data-toggle="dropdown", ng-disabled="orderCart.length === 0")
+            i.fa.fa-message
+            |  Cart
+            span.label.label-info {{orderCart.length}}
+          .dropdown-menu.alt-text.pr-btn-drpdwn(role="menu", style="text-transform: capitalize;z-index: 99999")
+            table.table.table-hover(cart-table="orderCart")
+              thead
+                tr
+                  th Item
+                  th Amount
+              tbody
+                tr(ng-repeat="cartItem in orderCart")
+                  td {{cartItem.itemName}}
+                  td {{cartItem.orderAmount}}
+            button.btn.btn-info.btn-block.btn-mini(style="border-radius: 0", ng-click="commons.href('dashboard/orders/cart')") View All Items
+            button.btn.btn-block.btn-danger.btn-bell.btn-mini(style="border-radius: 0", ng-click="clearCart()", ng-show="orderCart.length > 0") Empty Cart
+
+

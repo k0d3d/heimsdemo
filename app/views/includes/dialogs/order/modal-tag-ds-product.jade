@@ -1,0 +1,21 @@
+#modal-tag-ds-product.modal.hide.fade.alt-text
+    .modal-header
+        h3 Add Item to Inventory
+      .modal-body.add-to-iv(style="text-transform: none")
+        p
+          | Do you want to bind this item to an existing item?
+        form()
+          label.control-label Find the item in inventory.
+          .controls.controls-row
+            input.input-xlarge(type="text",ng-model="drugname", type-ahead, th-name="itemname", placeholder="e.g. Panadol", selected-item="selectedItem", type-action="")
+            button.btn(type="button", ng-click="more_info()") More Info
+            button.btn(ng-click="tag_ds_product()", ng-class="saveButtonClass") Attach
+            span.help-block
+        p.alert.alert-info(ng-show='attach_status')
+          span Good work! You can now <a ng-href="/dashboard/order?s={{attach_status.itemName}}&tab=iv&productId={{attach_status.productId}}">order this</a> item.
+        hr
+        p
+          | You can also <a ng-href="/items/{{now_product._id}}/ds-add/ds-add">create a new item</a>.
+
+      .modal-footer
+        button.btn.btn-default(new-modal="#modal-tag-ds-product") Close

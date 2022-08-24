@@ -1,0 +1,20 @@
+.row
+  .span6
+    form.form-vertical()
+      div.controls
+        label(for="username") Username
+        input#username.span3(type="text", required)
+        label(for="password") Password
+        input#password.span3(type="password", required)
+        span.help-inline 8 to 16 characters long
+      div.controls.control-row
+        label(for="firstname") First Name
+        input#firstname.span3(type="text", placeholder="First Name", name="firstname")        
+        label(for="lastname") Last Name
+        input#lastname.span3(type="text", placeholder="Last Name", name="lastname")
+      div.controls.control-row
+        label(for="email-address") Email Address
+        input.span4(type="email", placeholder="Email Address", required)        
+        label(for="phonenumber") Mobile Number
+        input.span2(type="tel", required)
+      button.btn.btn-primary(type="submit") Register

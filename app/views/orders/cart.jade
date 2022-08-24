@@ -1,0 +1,49 @@
+append head
+  link(rel='stylesheet', href='/css/table-fixed-header.css')
+
+block body
+  include ../includes/modals/modal-order-supplied.jade
+  .row-fluid.row-break
+    .span2.actioncol
+      .search-bar
+
+      button.btn.btn-large.btn-block.btn-default(ng-click="commons.backBtn()") Go Back
+    .span10(ng-show="orderCart.length > 0 && !selectedView")
+      .row-fluid.fixed-table
+        #print-table-cart.table-content
+          table#list-cart.table.table-fixed-header
+            thead.header
+              tr
+                th
+                th Item
+                th Quantity
+                th Unit Price (N)
+                th.noprint Order Date
+                th.noprint Supplier
+                th.noprint Action
+            tbody(ng-repeat="(key, orderItem) in orderCart | filter: cartFilter | groupBy: 'orderSupplier.supplierName'")
+              tr
+                td
+                  span.badge.badge-success(style="cursor: pointer", ng-click="init_modal(orderItem)", new-modal="#modal-order-supplied",)
+                    i.fa.fa-shopping-cart.pull-left
+                td <strong>{{key}}</strong>
+              tr(ng-repeat="or in orderItem")
+                td
+                td {{or.itemName}}
+                td {{or.orderAmount}}
+                td {{or.orderPrice}}
+                td.noprint {{or.orderDate | date:'medium'}}
+                td.noprint {{or.orderSupplier.supplierName }}
+                td.noprint
+                  button.btn.btn-small.btn-danger.btn-bell(ng-click="removeFromCart(or.orderId, $index)")
+                    i.fa.fa-times
+    .span10(ng-show="orderCart.length === 0")
+      h4.align-center Order Cart Empty
+
+
+
+
+
+append foot
+  script(src="js/table-fixed-header.js")
+

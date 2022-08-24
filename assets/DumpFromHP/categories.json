@@ -1,0 +1,264 @@
+[
+{
+    "_id" : {"$oid":"52a1ac0d69d1bd21b46ce8b7"},
+    "categoryName" : "Anasthetics",
+    "categoryType" : "system"
+}
+
+,{
+    "_id" : {"$oid":"52a1ac0e69d1bd21b46ce8b8"},
+    "categoryName" : "Analgesics,Anti Inflammatory & Anti Pyretics",
+    "categoryType" : "system"
+}
+
+,{
+    "_id" : {"$oid":"52a1ac0e69d1bd21b46ce8b9"},
+    "categoryName" : "Animal Vaccine Products",
+    "categoryType" : "system"
+}
+
+,{
+    "_id" : {"$oid":"52a1ac0e69d1bd21b46ce8ba"},
+    "categoryName" : "Anti Acids & Ulcer Healer Drugs",
+    "categoryType" : "system"
+}
+
+,{
+    "_id" : {"$oid":"52a1ac0e69d1bd21b46ce8bb"},
+    "categoryName" : "Anti Diabetics ",
+    "categoryType" : "system"
+}
+
+,{
+    "_id" : {"$oid":"52a1ac0e69d1bd21b46ce8bc"},
+    "categoryName" : "Anti  Asthmatics",
+    "categoryType" : "system"
+}
+
+,{
+    "_id" : {"$oid":"52a1ac0e69d1bd21b46ce8bd"},
+    "categoryName" : "Anti Bacterial Agents & Anti Protozal agents",
+    "categoryType" : "system"
+}
+
+,{
+    "_id" : {"$oid":"52a1ac0e69d1bd21b46ce8be"},
+    "categoryName" : "Anti Biotics",
+    "categoryType" : "system"
+}
+
+,{
+    "_id" : {"$oid":"52a1ac0e69d1bd21b46ce8bf"},
+    "categoryName" : "Anti Caner",
+    "categoryType" : "system"
+}
+
+,{
+    "_id" : {"$oid":"52a1ac0e69d1bd21b46ce8c0"},
+    "categoryName" : "Anti Diarrhoea Drugs & Laxatives",
+    "categoryType" : "system"
+}
+
+,{
+    "_id" : {"$oid":"52a1ac0e69d1bd21b46ce8c1"},
+    "categoryName" : "Antiemetics & Antispasmodic",
+    "categoryType" : "system"
+}
+
+,{
+    "_id" : {"$oid":"52a1ac0e69d1bd21b46ce8c2"},
+    "categoryName" : "Anti Fungals",
+    "categoryType" : "system"
+}
+
+,{
+    "_id" : {"$oid":"52a1ac0e69d1bd21b46ce8c3"},
+    "categoryName" : "Anti Hemorroid Preparations",
+    "categoryType" : "system"
+}
+
+,{
+    "_id" : {"$oid":"52a1ac0e69d1bd21b46ce8c4"},
+    "categoryName" : "Anti Helminitics",
+    "categoryType" : "system"
+}
+
+,{
+    "_id" : {"$oid":"52a1ac0e69d1bd21b46ce8c5"},
+    "categoryName" : "Anti Histamines",
+    "categoryType" : "system"
+}
+
+,{
+    "_id" : {"$oid":"52a1ac0e69d1bd21b46ce8c6"},
+    "categoryName" : "Anti Malrials",
+    "categoryType" : "system"
+}
+
+,{
+    "_id" : {"$oid":"52a1ac0e69d1bd21b46ce8c7"},
+    "categoryName" : "Anti Migraine Drugs",
+    "categoryType" : "system"
+}
+
+,{
+    "_id" : {"$oid":"52a1ac0e69d1bd21b46ce8c8"},
+    "categoryName" : "Anti Muscarinic",
+    "categoryType" : "system"
+}
+
+,{
+    "_id" : {"$oid":"52a1ac0e69d1bd21b46ce8c9"},
+    "categoryName" : "Anti Neoplastic & Immunomodulating Agents",
+    "categoryType" : "system"
+}
+
+,{
+    "_id" : {"$oid":"52a1ac0e69d1bd21b46ce8ca"},
+    "categoryName" : "Anti Psychotic",
+    "categoryType" : "system"
+}
+
+,{
+    "_id" : {"$oid":"52a1ac0e69d1bd21b46ce8cb"},
+    "categoryName" : "Antiseptics,Disinfectants & Mouthwashes",
+    "categoryType" : "system"
+}
+
+,{
+    "_id" : {"$oid":"52a1ac0e69d1bd21b46ce8cc"},
+    "categoryName" : "Anti tussive,Expectorants & Mucolytics",
+    "categoryType" : "system"
+}
+
+,{
+    "_id" : {"$oid":"52a1ac0e69d1bd21b46ce8cd"},
+    "categoryName" : "Antiviral",
+    "categoryType" : "system"
+}
+
+,{
+    "_id" : {"$oid":"52a1ac0e69d1bd21b46ce8ce"},
+    "categoryName" : "Cardiovascular System",
+    "categoryType" : "system"
+}
+
+,{
+    "_id" : {"$oid":"52a1ac0e69d1bd21b46ce8cf"},
+    "categoryName" : "Contraceptives",
+    "categoryType" : "system"
+}
+
+,{
+    "_id" : {"$oid":"52a1ac0e69d1bd21b46ce8d0"},
+    "categoryName" : "Dermatological Preparations",
+    "categoryType" : "system"
+}
+
+,{
+    "_id" : {"$oid":"52a1ac0e69d1bd21b46ce8d1"},
+    "categoryName" : "Parkinson Drugs",
+    "categoryType" : "system"
+}
+
+,{
+    "_id" : {"$oid":"52a1ac0e69d1bd21b46ce8d2"},
+    "categoryName" : "Eye,Ear & Throat Preparations",
+    "categoryType" : "system"
+}
+
+,{
+    "_id" : {"$oid":"52a1ac0e69d1bd21b46ce8d3"},
+    "categoryName" : "Haematinics",
+    "categoryType" : "system"
+}
+
+,{
+    "_id" : {"$oid":"52a1ac0e69d1bd21b46ce8d4"},
+    "categoryName" : "Herbal Products",
+    "categoryType" : "system"
+}
+
+,{
+    "_id" : {"$oid":"52a1ac0e69d1bd21b46ce8d5"},
+    "categoryName" : "Hormones,Synthetics,Substitutes & Thyroid Drugs",
+    "categoryType" : "system"
+}
+
+,{
+    "_id" : {"$oid":"52a1ac0e69d1bd21b46ce8d6"},
+    "categoryName" : "Human Biologicals",
+    "categoryType" : "system"
+}
+
+,{
+    "_id" : {"$oid":"52a1ac0e69d1bd21b46ce8d7"},
+    "categoryName" : "Human Vaccine Products",
+    "categoryType" : "system"
+}
+
+,{
+    "_id" : {"$oid":"52a1ac0e69d1bd21b46ce8d8"},
+    "categoryName" : "Hypnotics,Anxiolities,Anti Convulsants & Anti depressant",
+    "categoryType" : "system"
+}
+
+,{
+    "_id" : {"$oid":"52a1ac0e69d1bd21b46ce8d9"},
+    "categoryName" : "Insecticides",
+    "categoryType" : "system"
+}
+
+,{
+    "_id" : {"$oid":"52a1ac0e69d1bd21b46ce8da"},
+    "categoryName" : "Oxytocics",
+    "categoryType" : "system"
+}
+
+,{
+    "_id" : {"$oid":"52a1ac0e69d1bd21b46ce8db"},
+    "categoryName" : "Pesticide Products",
+    "categoryType" : "system"
+}
+
+,{
+    "_id" : {"$oid":"52a1ac0e69d1bd21b46ce8dc"},
+    "categoryName" : "Rubefacients",
+    "categoryType" : "system"
+}
+
+,{
+    "_id" : {"$oid":"52a1ac0e69d1bd21b46ce8dd"},
+    "categoryName" : "Skeletal Muscle Relaxants",
+    "categoryType" : "system"
+}
+
+,{
+    "_id" : {"$oid":"52a1ac0e69d1bd21b46ce8de"},
+    "categoryName" : "Vaccines & Biologicals",
+    "categoryType" : "system"
+}
+
+,{
+    "_id" : {"$oid":"52a1ac0e69d1bd21b46ce8df"},
+    "categoryName" : "Veterinary Drugs/Products",
+    "categoryType" : "system"
+}
+
+,{
+    "_id" : {"$oid":"52a1ac0e69d1bd21b46ce8e0"},
+    "categoryName" : "Vitamins & Minerals",
+    "categoryType" : "system"
+}
+
+,{
+    "_id" : {"$oid":"52a1ac0e69d1bd21b46ce8e1"},
+    "categoryName" : "Miscellaneous",
+    "categoryType" : "system"
+}
+,{
+    "_id" : {"$oid":"52a1ac0e69d1bd21b46ce8e2"},
+    "categoryName" : "Others",
+    "categoryType" : "system"
+}
+]

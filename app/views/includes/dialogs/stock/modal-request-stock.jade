@@ -1,0 +1,37 @@
+#modal-request-stock-down.modal.hide.fade.alt-text
+    .modal-header
+        h3 Request Stock Out
+      .modal-body
+        form.newstockdown
+          .control-group
+            label.control-label Origin
+            select(name="main_locationselect", ng-model="requestform.location.origin", ng-options="l.locationName for l in main_location", required)
+          .control-group
+            label.control-label Destination
+            select(name="sub_locationselect", ng-model="requestform.location.destination", ng-options="l.locationName for l in sub_locations", required)
+          .control-group
+              label.control-label Items on to Stock out
+              .controls
+                  input.input-xlarge(type="text",ng-model="drugname", type-ahead="", th-name="itemname", selected-item="selectedItem")
+                  button.btn.btn-warning.pull-right(type="button", ng-click="addSelectedDrug()", style="position: relative;left: -53px;top: 5px;") {{addButtonText}}
+                  span.help-block {{addHelpText}}
+          table.table.drugs-list.table-fixed-header(ng-show="requestform.request.length > 0")
+            thead.header
+              tr
+                th Drug Name
+                th Stock
+                th Quantity
+                th
+            tbody
+              tr(data-ng-repeat="(i,drugs) in requestform.request")
+                td {{requestform.request[$index].itemName}}
+                td {{requestform.request[$index].currentStock / requestform.request[$index].itemSize}}
+                td
+                  .control-group(ng-class="{ error: requestform.request[$index].amount > requestform.request[$index].currentStock}")
+                    input.input-small(ng-change="quantityChanges(requestform.request[$index])" ng-model="requestform.request[$index].unitQuantity", placeholder="quantity", type="text", data-toggle="tooltip", data-placement="top", title="{{requestform.request[$index].itemForm}}")
+                td
+                  i.icon-remove.pull-right(ng-click="removeDrug($index)")
+
+      .modal-footer
+        button.btn.btn-default(new-modal="#modal-request-stock-down") Back
+        button.btn(ng-click="sendIt()",ng-init="saveButtonText='Send Request'", ng-class="saveButtonClass", ng-disabled="requestform.location.length == 0 || requestform.request.length == 0 || requestform.requestList == 0 ") {{saveButtonText}}

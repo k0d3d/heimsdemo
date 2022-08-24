@@ -1,0 +1,35 @@
+.row(ng-controller="reportsLocation")
+  .span4
+    form(style="padding: 0 30px;", ng-submit="getReport()")
+      label Location
+      select(ng-model="searchform.location", ng-options="l.locationName for l in locations", required)
+      label Drug name
+      input.input-medium(type="text", location-item, ng-model="searchform.itemName", required)
+      label From <em>Start date</em>
+      input.input-medium(type="date", ng-model="searchform.from", required, name="startdate")
+      label To <em>End date</em>
+      input.input-medium(type="date", ng-model="searchform.to", required, name="enddate") 
+      button.btn.btn-info(type="submit") Get Report
+
+  .span8
+    .row
+      .pull-right
+        select(ng-model="filterLocationReport")
+          option(value="Dispense") Dispense
+          option(value="Requested Stock") Requested
+    .row
+      .table-content
+        table#list-orders.table.table-fixed-header
+          thead.header
+            tr
+              th Date
+              th Item
+              th Quantity
+              th Status
+          tbody
+            tr(ng-repeat="r in reports | filter: filterLocationReport")
+              td {{r.date | date:'medium'}}                
+              td 
+                a(href="/items/{{order.itemData[0]._id}}/edit") {{r.item.itemName}}
+              td {{r.amount}}
+              td {{r.action}} 

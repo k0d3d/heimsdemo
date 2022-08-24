@@ -1,0 +1,62 @@
+.row-fluid.row-break
+  .span3
+    .tile.palette-emerald(ng-click="arhref('items/list')", data-arhrefVal="items/list")
+      .tile-sub
+        span.enicon.whiteicon &#57349;
+        h4 View Inventory
+  .span3
+    .tile.palette-sun-flower(ng-click="arhref('items/add')")
+      .tile-sub
+        span.enicon.whiteicon &#10133;
+        h4 Add Inventory
+  .offset-section.span2
+    .tile.palette-turquoise(ng-click="arhref('items/list/low')")
+      .tile-sub
+        span.enicon.whiteicon &#128255;
+        h4 0
+        span Low Stock Items
+  .span2
+    .tile.palette-turquoise(ng-click="arhref('orders/pending')")
+      .tile-sub  
+        h4 0
+        span pending orders
+  .span2
+    .tile.palette-turquoise(ng-click="arhref('invoices/pending')")
+      .tile-sub
+        h4 0 
+        span pending invoices
+.row-fluid.row-break
+  .span3
+    .tile.palette-peter-river(ng-click="arhref('reports')")
+      .tile-sub
+        span.enicon.whiteicon &#128200;
+        h4 View Reports
+  .span3
+    .tile.palette-amethyst(ng-click="arhref('orders/new')")
+      .tile-sub
+        span.enicon.whiteicon &#59197;
+        h4 Place Order
+  .offset-section.span2
+    .tile
+      .tile-sub
+        h4 200
+        span total stock
+  .span2
+    .tile
+      .tile-sub
+        h4 0
+        span outstanding bills
+  .prepend-tile
+    div
+      span.enicon.whiteicon &#8862;
+      New Bill
+.row-fluid.row-break
+  .offset3.span3
+    .tile.palette-peter-river(ng-click="arhref('orders/list')")
+      .tile-sub
+        span.enicon.whiteicon &#128200;
+        h4 View Orders
+
+append foot
+  script(src='js/index.js')
+  

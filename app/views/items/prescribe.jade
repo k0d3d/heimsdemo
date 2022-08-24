@@ -1,0 +1,87 @@
+append head
+  link(rel='stylesheet', href='/css/table-fixed-header.css')
+
+append mainbody
+  include ../includes/modals/dispensary/modal-success.jade
+  include ../includes/dialogs/bills/view.jade
+.row-fluid.row-break
+  .span2.actioncol
+    button.btn.btn-large.btn-block.btn-default(ng-click="commons.backBtn()") Go Back
+    h4(style="margin-top: 11px;border-bottom: solid 3px #0AC4FF;") Location
+    p(style="border: solid 1px #fff;padding: 6px;") {{dispenseform.location.locationName}}
+  .span8.offset1(ng-show="n_w")
+    h3 Dispense Prescription
+    form.newdispense
+      .control-group
+          label.control-label Patient Name
+          .controls
+              input.input-large(type="text",name="patientname", ng-model="dispenseform.patientName", readonly)
+      .control-group
+          label.control-label Doctor Name
+          .controls
+              input.input-large(type="text",name="patientnumber", ng-model="dispenseform.doctorName", readonly)
+      .control-group
+          label.control-label Drug Name
+          .controls
+              input.input-xlarge(type="text",ng-model="drugname", type-ahead, th-name="itemname", ng-minlength="1")
+              button.btn.btn-warning.pull-right(type="button", ng-click="addDrug()", style="position: relative;left: -53px;top: 5px;") {{addButtonText}}
+              span.help-block {{addHelpText}}                
+      table.table.drugs-list.table-fixed-header(ng-show="drugsList.length > 0 || od.length > 0")
+        thead.header
+          tr
+            th Drug Name
+            th.span1 Price@
+            th Stock
+            th Amount
+            th Options
+            th 
+        tbody
+          tr(data-ng-repeat="(i,drugs) in drugsList", ng-class="{faded: d[$index].ready}")
+            td {{d[$index].itemName}}
+            td  
+              select(style="width: 70px", ng-model="d[$index].cost", ng-options="c for c in d[$index].orderPrice", ng-init="d[$index].cost = d[$index].orderPrice[0]")
+                option {{d[$index].itemPurchaseRate}}            
+            td {{d[$index].currentStock}}
+            td 
+              .control-group(ng-class="{ error: d[$index].amount > d[$index].currentStock }")
+                input.input-small(ng-model="d[$index].amount", type="number")
+            td 
+              select(ng-model="d[$index].options", required)
+                option(value="dispense") Dispense
+                option(value="alternative") Give Alternative
+                option(value="purchase") Immediate Purchase
+                option(value="appointment") Supply on appointment
+                option(value="rx") RX
+              select(ng-model="d[$index].dosage",placeholder="Dosage", ng-change="adjust_amount($index)")
+                option(value="1") 1x Daily (OD)
+                option(value="2") 2x Daily (BD)
+                option(value="3") 3x Daily (TDS)
+                option(value="4") 4x Daily (QDS)
+                option(value="5") When Necessary (PRN)
+            td
+              input.input-small(ng-model="d[$index].period",placeholder="Duration", type="number", min="1", max="31", ng-change="adjust_amount($index)")                
+            td
+              button.btn.btn-mini.btn-primary(ng-click="prescribeThis($index)", ng-disabled="!d[$index].options.length > 0 || d[$index].ready", ng-init="d[$index].ready = false") Confirm
+              i.icon-remove.icon-white.pull-right(ng-click="removeDrug($index)")
+          tr.comp-list(data-ng-repeat="_d in od")
+            td {{_d.itemName}}
+            td         
+            td
+            td 
+            td 
+              select(ng-model="_d.dosage",placeholder="Dosage", disabled)
+                option(value="1") 1x Daily (OD)
+                option(value="2") 2x Daily (BD)
+                option(value="3") 3x Daily (TDS)
+                option(value="4") 4x Daily (QDS)
+                option(value="5") When Necessary (PRN)
+            td
+              input.input-small(ng-model="_d.period",placeholder="Duration", type="number", min="1", max="31", disabled)                
+            td
+              i.fa.fa-exclamation-circle.icon-white.pull-right(title="Drug not available in this facility. Pick alternative or purchase at RX")
+      hr
+      button.btn.btn-default(ng-click="n_w = !n_w;all = !all;btnState = !btnState") Back
+      button.btn.btn-primary(ng-click="approveThis()",ng-init="saveButtonText='Approve'") {{saveButtonText}}
+
+append foot
+  script(src="js/table-fixed-header.js")                

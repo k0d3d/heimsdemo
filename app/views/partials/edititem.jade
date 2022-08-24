@@ -1,0 +1,52 @@
+.row-fluid.row-break
+  .span2.actioncol
+    a.btn.btn-large.btn-block.btn-primary(href="#fakelink", ng-click='editPost()') Update Item
+    a.btn.btn-large.btn-block.btn-primary(href="#fakelink") Go Back
+  .span8
+    .row-fluid
+      form#form-edit-item
+        .span4
+          label(for="itemtype") Inventory Type
+          select (name="itemtype", class="span2")
+            option Medication
+            option Equipment
+          label(for="sci-name") Scientific Name
+          input(type="text", class="span3", name="sci-name")
+          label(for="name") Brand Name
+          input(type="text",name="name",class="span3")
+          label(for="man-name") Manufacturer
+          input(name="man-name",class="span3",type="text")
+          label(for="category") Category
+          select(multiple="true")
+          label(for="itemdesc") Item Description
+          textarea(name="itemdesc",class="span3")
+        .span4.offset2
+          label(for="invoice-number") Invoice Number
+          input(type="text", name="invoice-number", class="span2", placeholder="No Stock Received")
+          div.optionalinput
+            label(for="invoice-date") Invoice Date
+            input(type="text", name="invoice-date", class="datepicker",disabled="true")
+            label(for="stock-amount") Stock Amount
+            input(type="number",class="span2",disabled="true")
+          label(for="supplier") Supplier
+          input(type="text", name="supplier",class="span3")
+          label(for="itemprice") Item Price
+          input(name="itemprice",class="span2",type="number")
+          label(for="bp") Boiling Point
+          input(type="number",name="bp",class="span2")
+          label(for="expdate") Batch Expiry Date
+          input(name="expdate",class="datepicker")
+          label(for="itemsize") Item Size
+          input(name="itemsize",'class="span2',type="number")
+          label(for="itempackaging") Item Packaging
+          select(name="itempackaging")
+            option Tablets
+            option Capsules
+            option Vials
+            option Caplets
+          label(for="rate") Rate
+          input(name="rate",type="text",class="span2")
+
+
+
+

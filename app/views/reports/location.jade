@@ -1,0 +1,36 @@
+append head
+  link(rel='stylesheet', href='/css/table-fixed-header.css')
+
+block body
+  .row-fluid.row-break
+    .span2.actioncol
+      button.btn.btn-large.btn-block.btn-primary(ng-click="commons.backBtn()") Items
+      button.btn.btn-large.btn-block.btn-primary(ng-click="commons.backBtn()") Orders
+      button.btn.btn-large.btn-block.btn-primary(ng-click="commons.backBtn()") Suppliers
+      button.btn.btn-large.btn-block.btn-primary(ng-click="commons.backBtn()") Dispensary
+      button.btn.btn-large.btn-block.btn-primary(ng-click="commons.href('reports/stock')") Stock Down
+      button.btn.btn-large.btn-block.btn-default(ng-click="commons.backBtn()") Go Back
+    .span10
+      .row-fluid.fixed-table
+        .table-content
+          table#list-orders.table.table-fixed-header
+            thead.header
+              tr
+                th Date
+                th Item
+                th Quantity
+                th Supplier
+                th Status
+            tbody
+              tr(ng-repeat="order in orders | filter: ordersfilter", on-finish="tableheader")
+                td {{order.orderDate | date:'medium'}}
+                td
+                  a(href="/items/{{order.itemData[0]._id}}/edit") {{order.itemData[0].itemName}}
+                td {{order.orderAmount}}
+                td {{order.orderSupplier[0].supplierName}}
+                td
+
+
+append foot
+  script(src="js/table-fixed-header.js")
+

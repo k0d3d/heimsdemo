@@ -1,0 +1,27 @@
+.row-fluid.row-break
+  .span8
+    table.table.table-striped
+      thead
+        tr
+          th Order ID
+          th Inventory Tyoe
+          th Item Ordered
+          th Stock Amount
+          th Order Description
+          th Supplier
+          th Order Status
+          th Actions
+      tbody
+        each order in orders
+          tr
+            th=order._id
+            th=order.orderType
+            th=order.itemID
+            th=order.orderAmount   
+            th=order.orderDescription   
+            th=order.orderSupplier   
+            th=order.orderStatus   
+            th
+              button Cancel   
+              button Confirm   
+              button Pay   

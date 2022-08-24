@@ -1,0 +1,22 @@
+.row-fluid.row-break
+  .span2.actioncol
+    button.btn.btn-large.btn-block.btn-primary(type="button", ng-click='submitPost()') Save Order
+    button.btn.btn-large.btn-block.btn-default(href="#fakelink") Go Back
+  .span8
+    .row-fluid
+      form#form-new-order
+        .span4
+          label(for="itemtype") Inventory Type
+          select#itemType(name="orderType",ng-model="form.orderType", class="input-medium")
+            option Medication
+            option Equipment
+          label(for="itemname") Item / Drug Name
+          input#itemname(type="text",class="span3",name="itemID",ng-model="form.itemID")          
+          label(for="orderdate") Order Date
+          input#orderdate(type="text",class="datepicker",name="orderDate",ng-model="form.orderDate")
+          label(for="orderamount") Order Amount
+          input#orderamount(type="number",class="span2",name="orderAmount",ng-model="form.orderAmount")
+          label(for="orderdesc") Order Description
+          textarea#orderdesc(ng-model="form.orderDescription",name="orderDescription",class="span3")
+          label(for="orderamount") Order Supplier
+          input#orderamount(type="text",class="span2",name="orderSupplier",ng-model="form.orderSupplier")

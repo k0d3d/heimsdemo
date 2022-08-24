@@ -1,0 +1,26 @@
+#modal-1.md-modal.md-effect-4(ng-class="[modal.state.dialog, modal.class]")
+  .md-content
+      h3 {{modal.heading}}
+      div
+        p {{modal.body}}
+        dl.dl-horizontal.this-patient
+          dt Patient Name
+          dd {{dispenseform.patientName}}
+          dt Patient Class
+          dd {{dispenseform.company}}
+          dt Patient ID
+          dd {{dispenseform.patientno}}
+        table.table
+          thead
+            tr
+              th Drugs
+              th Quantity
+              th Option
+          tbody
+            tr(ng-repeat="p in dispenseform.prescription")
+              td {{p.itemName}}
+              td {{d[$index].unitQuantity || 0}} {{d[$index].itemPackaging}}
+              td {{p.options}}
+
+        button.md-close(ng-click="modal.close()") Close
+        button(ng-click="sendDis()") Confirm

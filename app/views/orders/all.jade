@@ -1,0 +1,39 @@
+append head
+  link(rel='stylesheet', href='/css/table-fixed-header.css')
+
+block body
+  .row-fluid.row-break
+    .span2.actioncol
+      .search-bar
+        input.input-medium(type="search", ng-model="ordersfilter.itemName", placeholder="Search Item Name")
+        input.input-medium(type="search", ng-model="ordersfilter.orderSupplier", placeholder="Search Supplier")
+        input.input-medium(type="search", ng-model="ordersfilter.orderInvoiceNumber", placeholder="Search Invoice Number")
+        input.input-medium(type="search", ng-model="ordersfilter.order_group_id", placeholder="Search Order ID")
+        select.input-medium(ng-model="ordersfilter.orderStatus")
+          option(value="")  All
+          option(value="3") Supplied
+          option(value="4") Paid
+          option(value="1") Pending Order
+      button.btn.btn-large.btn-block.btn-default(ng-click="commons.backBtn()") Go Back
+    .span10
+      .row-fluid.fixed-table
+        .table-content
+          table#list-orders.table.table-fixed-header
+            thead.header
+              tr
+                th Order ID
+                th Item
+                th Quantity
+                th Cost (N)
+                th Order Date
+                th Supplier
+                th Status
+                th Action
+            tbody(order-list="orders", orders-filter="ordersfilter", get-status="getStatus(status)")
+
+
+
+
+append foot
+  script(src="js/table-fixed-header.js")
+

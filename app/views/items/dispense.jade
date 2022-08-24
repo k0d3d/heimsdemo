@@ -1,0 +1,125 @@
+append head
+  link(rel='stylesheet', href='/css/table-fixed-header.css')
+
+append mainbody
+  include ../includes/modals/dispensary/modal-success.jade
+  include ../includes/dialogs/bills/view.jade
+.row-fluid.row-break
+  .span2.actioncol
+    h4 Location
+    select(ng-model="dispenseform.location", ng-change="clrForm()", ng-options="l.locationName for l in locations", required)
+    button.btn.btn-large.btn-block.btn-primary(ng-click="n_w = !n_w;all = !all;btnState = !btnState", ng-disabled="btnState") Prescribe
+    button.btn.btn-large.btn-block.btn-default(ng-click="commons.backBtn()") Go Back
+  .span8.offset1(ng-show="n_w")
+    h3 Dispense Prescription
+    form.newdispense(name="newdispense")
+      .control-group
+          label.control-label Patient Name
+          .controls
+              input.input-large(type="text",name="patientname", ng-model="dispenseform.patientName")
+      .control-group
+          label.control-label Patient Class / Company
+          .controls
+              select(ng-options="a.profileName for a in profiles", ng-model="dispenseform.billClass", required)
+      .control-group
+          label.control-label Patient ID
+          .controls
+              input.input-large(type="text",name="patientnumber", ng-model="dispenseform.patientId")
+      .control-group
+          label.control-label Drug Name
+          .controls
+              input.input-xlarge(type="text",ng-model="drugname", type-ahead, th-name="itemname", selected-item="selectedItem", type-action="attach_grouped_item")
+              button.btn.btn-warning(type="button", ng-click="addDrug()", style="position: relative", ng-disabled="newdispense.$invalid || !dispenseform.location") {{addButtonText}}
+              span.help-block {{addHelpText}}
+      table.table.drugs-list.table-fixed-header(ng-show="drugsList.length > 0")
+        thead.header
+          tr
+            th Drug Name
+            th.span1 Price@
+            th Stock
+            th
+              span.label.label-warning Quantity
+            th Options
+            th
+        tbody
+          tr(data-ng-repeat="(i,drugs) in drugsList", ng-class="{faded: d[$index].ready}")
+            td
+              | {{d[$index].itemName}}
+            td
+              select(style="width: 70px", ng-model="d[$index].selected_price", ng-options="c for c in d[$index].orderPrice", ng-change="adjust_amount($index)", ng-init="d[$index].selected_price = d[$index].itemPurchaseRate")
+            td <span>{{d[$index].currentStock / d[$index].itemSize}}</span> <em style="text-transform: none"> as </em><span class="badge badge-warning" data-toggle="tooltip" data-placement="top" title="item of {{d[$index].packageSize}} {{d[$index].itemForm}}">{{d[$index].currentStock / d[$index].packageSize}}</span>
+            td
+              .control-group(ng-class="{ error: d[$index].amount > d[$index].currentStock }")
+                //input.input-small(ng-change="adjust_amount($index)" ng-model="d[$index].unitQuantity", type="number", readonly)
+                p.input-small {{d[$index].unitQuantity || 0}} {{d[$index].itemPackaging}}
+            td
+              .row
+                .span6
+                  select(ng-model="d[$index].options", required)
+                    option(value="dispense") Dispense
+                    option(value="alternative") Alternative Given
+                    //- option(value="purchase") Immediate Purchase
+                    //- option(value="appointment") Supply on appointment
+                    option(value="rx") RX
+                .span6
+                  select(ng-model="d[$index].dosage",placeholder="Dosage", ng-change="adjust_amount($index)",required)
+                    option(value="1") 1x Daily (OD)
+                    option(value="2") 2x Daily (BD)
+                    option(value="3") 3x Daily (TDS)
+                    option(value="4") 4x Daily (QDS)
+                    option(value="5") When Necessary (PRN)
+                    option(value="5") Start
+              .row()
+                .span6(ng-init="d[$index].dose = 1", ng-show="is_fluid(d[$index].itemForm)")
+                  label.control-label Dose <span style="text-transform: none">(ml)</span>
+                  .controls
+                      input.input-mini(type="number",ng-model="d[$index].dose", ng-change="adjust_amount($index)")
+                .span6(ng-init="d[$index].qty = 1")
+                  label.control-label Quantity
+                  .controls
+                      input.input-mini(type="number",ng-model="d[$index].qty", ng-change="adjust_amount($index)")
+            td
+              input.input-small(ng-model="d[$index].period",placeholder="Duration", type="number", min="1", ng-change="adjust_amount($index)")
+            td
+              button.btn.btn-mini.btn-primary(ng-click="prescribeThis($index)", ng-disabled="!d[$index].options.length > 0 || d[$index].ready", ng-init="d[$index].ready = false") Confirm
+              i.icon-remove.icon-white.pull-right(ng-click="removeDrug($index)")
+        tfoot
+          tr
+            td(ng-show="dispenseform.prescription.length")
+              button.btn.btn-bordered(ng-click="n_w = !n_w;all = !all;btnState = !btnState") Show Dispense Records
+              button.btn.btn-primary(ng-click="approveThis()",ng-init="saveButtonText='Approve'") {{saveButtonText}}
+  .span8.offset1(ng-show="all")
+    .row-fluid.fixed-table
+      .span12
+        .table-content
+          table#list-orders.table.table-fixed-header
+            thead.header
+              tr
+                th Patient Name
+                th Doctor
+                th Date Requested
+                th List of Drugs
+                th Actions
+            tbody
+              tr(ng-repeat="record in dispenseHistory")
+                td {{record.patientName}}
+                td <a href="/doctors/lookup/{{record.doctorId}}">{{record.doctorName}}</a>
+                td {{record.issueDate | date: 'medium'}}
+                td
+                  .btn-group.dropdown
+                    a.btn.btn-info {{record.drugs.length}}
+                    a.btn.btn-dropdown-toggle.btn-info(data-toggle="dropdown")
+                      span.caret
+                    ul.dropdown-menu.alt-text
+                      li.listofdrugs(ng-repeat="listofdrugs in record.drugs")
+                        a(href="#")
+                          p {{listofdrugs.itemName}}
+                          span.label.label-info {{listofdrugs.amount}}
+                  //button.btn.btn-danger
+                    i.fa.fa-print(title="Print Prescription")
+                td
+                  button.btn.btn-primary(type="button", new-modal="#dialog-view-bill", ng-click="viewBill(record._id)") View Bill
+
+
+append foot
+  script(src="js/table-fixed-header.js")

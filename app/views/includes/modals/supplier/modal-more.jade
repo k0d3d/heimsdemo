@@ -1,0 +1,23 @@
+#modal-supplier-view.modal.hide.fade.alt-text(data-backdrop="static")
+    .modal-header
+        h3 Supplier Detials
+      .modal-body
+        dl.headed
+          dt Supplier Name
+          dd {{supplierView.supplierName}}
+          dt Address
+          dd {{supplierView.address}}
+          dt Email
+          dd {{supplierView.email}}
+          dt Phone Number
+          dd {{supplierView.phoneNumber}}
+          dt Other Contact
+          dd {{supplierView.otherContact}}
+          dt Contact Person
+          dd {{supplierView.contactPerson}}
+          dt Contact Person Phone
+          dd {{supplierView.contactPersonPhone}}
+      .modal-footer
+        button.btn.btn-default(data-dismiss="modal") Back
+        button.btn.btn-primary(ng-click="closeMore(); commons.href('/suppliers/'+supplierView._id+'/edit')") Edit
+        button.btn.btn-primary(ng-click="closeMore(); commons.href('/suppliers/'+supplierView._id+'/edit')") Supplier Report

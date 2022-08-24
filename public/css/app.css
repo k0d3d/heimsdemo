@@ -1,0 +1,1072 @@
+/* app css stylesheet */
+@font-face {
+  font-family: 'entypo';
+  src: url("../fonts/entypo.eot");
+  src: url("../fonts/entypo.eot?#iefix") format("embedded-opentype"), url("../fonts/entypo.woff") format("woff"), url("../fonts/entypo.ttf") format("truetype"), url("../fonts/entypo.svg#entypo") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'OpenSans Semibold';
+  src: url("../fonts/opensans-semibold-webfont.eot");
+  src: url("../fonts/opensans-semibold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/opensans-semibold-webfont.woff") format("woff"), url("../fonts/opensans-semibold-webfont.ttf") format("truetype"), url("../fonts/opensans-semibold-webfont.svg#opensans-semibold-webfont") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'OpenSans Light';
+  src: url("../fonts/opensans-light-webfont.eot");
+  src: url("../fonts/opensans-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/opensans-light-webfont.woff") format("woff"), url("../fonts/opensans-light-webfont.ttf") format("truetype"), url("../fonts/opensans-light-webfont.svg#opensans-light-webfont") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'OpenSans Regular';
+  src: url("../fonts/opensans-regular-webfont.eot");
+  src: url("../fonts/opensans-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/opensans-regular-webfont.woff") format("woff"), url("../fonts/opensans-regular-webfont.ttf") format("truetype"), url("../fonts/opensans-regular-webfont.svg#opensans-regular-webfont") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'OpenSans Semibold';
+  src: url("../fonts/opensans-semibold-webfont.eot");
+  src: url("../fonts/opensans-semibold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/opensans-semibold-webfont.woff") format("woff"), url("../fonts/opensans-semibold-webfont.ttf") format("truetype"), url("../fonts/opensans-semibold-webfont.svg#opensans-semibold-webfont") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+a:hover {
+  cursor: pointer;
+}
+
+html, body {}
+
+[ng-cloak] {
+  display: none;
+}
+
+#wrap {
+  position: relative;
+  /* needed for footer positioning*/
+  margin: 0 auto;
+  height: 100%;
+  min-height: 100%;
+  /* real browsers */
+  width: 100%;
+  overflow: hidden;
+}
+
+div.tile {
+  height: 100px;
+  padding: 15px;
+  display: block;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+div.tile h4 {
+  font-size: 2em;
+  line-height: 35px;
+  font-family: "OpenSans Light";
+}
+
+div.tile:hover {
+  -webkit-box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.56) inset;
+  box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.56) inset;
+  height: 100px;
+  padding: 15px;
+}
+
+.tile span.enicon {
+  float: left;
+}
+
+.tile-sub {
+  display: table-cell;
+  vertical-align: middle;
+  height: 50%;
+}
+
+.offset-section {
+  margin-left: 2%;
+}
+
+.row-break {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+span.enicon {
+  color: #333333;
+  font-family: "entypo";
+  font-size: 6em;
+  line-height: 1;
+}
+
+span.whiteicon {
+  color: white;
+}
+
+form div.optionalinput {}
+
+.sectionAZ {
+  width: 100%;
+  display: block;
+}
+
+.card-section {
+  overflow: hidden;
+  background-color: transparent;
+  height: 450px;
+  position: relative;
+}
+
+.card-section span.legend {
+  position: absolute;
+  left: -10px;
+}
+
+.card {
+  width: 150px;
+  height: 75px;
+  display: block;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05) inset;
+  float: left;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding: 4px;
+  background-color: #2ecc71;
+  cursor: pointer;
+  border: thin inset rgba(0, 0, 0, 0.41);
+  position: relative;
+}
+
+.card:hover:before {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.card span {
+  text-align: right;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 6px;
+}
+
+.low-stock {
+  background-color: #e74c3c;
+}
+
+.good-stock {}
+
+.empty-stock {
+  background-color: #ecf0f1;
+  color: #2C3E50;
+}
+
+li.index.active {
+  cursor: pointer;
+}
+
+/* General styles for all menus */
+.cbp-spmenu {
+  background: #47a3da;
+  position: fixed;
+}
+
+.cbp-spmenu h3 {
+  color: #afdefa;
+  font-size: 1.9em;
+  padding: 20px;
+  margin: 0;
+  font-weight: 300;
+  background: #0d77b6;
+}
+
+.cbp-spmenu a {
+  display: block;
+  color: #fff;
+  font-size: 1.1em;
+  font-weight: 300;
+}
+
+.cbp-spmenu a:hover {
+  background: #258ecd;
+}
+
+.cbp-spmenu a:active {
+  background: #afdefa;
+  color: #47a3da;
+}
+
+/* Orientation-dependent styles for the content of the menu */
+
+.cbp-spmenu-vertical {
+  width: 240px;
+  height: 100%;
+  top: 0;
+  z-index: 1021;
+}
+
+.cbp-spmenu-vertical a {
+  border-bottom: 1px solid #258ecd;
+  padding: 1em;
+}
+
+.cbp-spmenu-horizontal {
+  width: 100%;
+  height: 150px;
+  left: 0;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.cbp-spmenu-horizontal h3 {
+  height: 100%;
+  width: 20%;
+  float: left;
+}
+
+.cbp-spmenu-horizontal a {
+  float: left;
+  width: 20%;
+  padding: 0.8em;
+  border-left: 1px solid #258ecd;
+}
+
+/* Vertical menu that slides from the left or right */
+
+.cbp-spmenu-left {
+  left: -240px;
+}
+
+.cbp-spmenu-right {
+  right: -240px;
+}
+
+.cbp-spmenu-left.cbp-spmenu-open {
+  left: 0px;
+}
+
+.cbp-spmenu-right.cbp-spmenu-open {
+  right: 0px;
+}
+
+/* Horizontal menu that slides from the top or bottom */
+
+.cbp-spmenu-top {
+  top: -150px;
+}
+
+.cbp-spmenu-bottom {
+  bottom: -150px;
+}
+
+.cbp-spmenu-top.cbp-spmenu-open {
+  top: 0px;
+}
+
+.cbp-spmenu-bottom.cbp-spmenu-open {
+  bottom: 0px;
+}
+
+/* Push classes applied to the body */
+
+.cbp-spmenu-push {
+  overflow-x: hidden;
+  position: relative;
+  left: 0;
+}
+
+.cbp-spmenu-push-toright {
+  left: 240px;
+}
+
+.cbp-spmenu-push-toleft {
+  left: -240px;
+}
+
+/* Transitions */
+
+.cbp-spmenu,
+.cbp-spmenu-push {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/* Example media queries */
+
+@media screen and (max-width: 55.1875em) {
+  .cbp-spmenu-horizontal {
+    font-size: 75%;
+    height: 110px;
+  }
+  .cbp-spmenu-top {
+    top: -110px;
+  }
+  .cbp-spmenu-bottom {
+    bottom: -110px;
+  }
+}
+
+@media screen and (max-height: 26.375em) {
+  .cbp-spmenu-vertical {
+    font-size: 90%;
+    width: 325px;
+  }
+  .cbp-spmenu-left,
+  .cbp-spmenu-push-toleft {
+    left: -190px;
+  }
+  .cbp-spmenu-right {
+    right: -190px;
+  }
+  .cbp-spmenu-push-toright {
+    left: 190px;
+  }
+}
+
+.summary {
+  padding: 15px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+.summary-actions p {
+  margin: 0 0 0px;
+}
+
+.summary-actions button {
+  border-radius: 0px;
+}
+
+.summary-actions button.btn-warning {
+  background-color: #304D7B;
+}
+
+.summary-actions button.btn-warning:hover {
+  background-color: #7299D6;
+}
+
+.summary dd {
+  font-weight: bold;
+  color: white;
+}
+
+.summary dt {
+  color: #333030;
+}
+
+.date-input-field {
+  width: 200px;
+  height: 20px;
+}
+
+#item-summary {
+  background-color: #233243;
+  border: 1px solid #202E3C;
+  padding: 5px;
+}
+
+#item-summary dt {
+  color: #fff;
+}
+
+#item-summary dd {
+  color: #1ABC9C;
+}
+
+ul.index-list {
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+}
+
+ul.index-list li {
+  float: left;
+  margin: 5px;
+  padding: 5px;
+  list-style: none;
+}
+
+ul.index-list .inactive {
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+ul.index-list .active {
+  background-color: #848484;
+  color: #ffffff;
+}
+
+#items-section:before {
+  color: #2ECC71;
+  content: "Inventory Items";
+  font-size: 1.5em;
+  position: relative;
+  top: -10px;
+}
+
+#orders-section:before {
+  color: #9B59B6;
+  content: "Orders";
+  font-size: 1.5em;
+  position: relative;
+  top: -10px;
+}
+
+#billing-section:before {
+  color: #95A5A6;
+  content: "Bills";
+  font-size: 1.5em;
+  position: relative;
+  top: -10px;
+}
+
+#admin-section:before {
+  color: #7F8C8D;
+  content: "Adminstration";
+  font-size: 1.5em;
+  position: relative;
+  top: -10px;
+}
+
+.panorama {
+  position: relative;
+  width: 100%;
+  margin: 0 40px;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size:
+}
+
+.panorama.nohidden {
+  width: auto;
+  overflow: inherit;
+}
+
+.panorama .panorama-sections {
+  position: relative;
+  width: 10000px;
+  height: auto;
+  padding-bottom: 24px;
+  overflow: hidden;
+}
+
+.panorama .panorama-sections h2 {
+  margin-left: 5px;
+  font-weight: 300;
+  text-transform: lowercase;
+}
+
+.panorama .panorama-sections .panorama-section {
+  position: relative;
+  float: left;
+  width: auto;
+  height: auto;
+  margin-right: 30px;
+  margin-left: 0;
+}
+
+.select-block.open ul {
+  min-width: 240px;
+  position: relative;
+}
+
+h2 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+input.date-input-field[type='text'] {
+  height: 20px;
+  width: 100px;
+}
+
+.open-summary {
+  display: block;
+}
+
+.close-summary {
+  display: none;
+}
+
+.alt-text {
+  color: #2C3E50;
+}
+
+.card:nth-child(4n + 5) {
+  clear: left;
+}
+
+.list-block {
+  padding: 0;
+  margin: 0;
+}
+
+.list-block li {
+  width: 100%;
+  list-style: none;
+  padding: 15px 5px;
+  box-sizing: border-box;
+  border-bottom: solid 1px rgba(22, 160, 133, 0.31);
+  opacity: 0.9;
+  position: relative;
+}
+
+.list-block li.active {
+  background-color: #2ECC71;
+}
+
+.list-block li:hover {
+  background-color: #16A085;
+}
+
+input#order-supplier-name + ul.typeahead {}
+
+span.drugname {
+  float: left;
+}
+
+ul.drugs-list {
+  margin: 0;
+}
+
+.this-patient dd {
+  margin-left: 200px;
+}
+
+.no-item-holder {
+  text-align: center;
+}
+
+#modal-request-stock-down .modal-body {
+  min-height: 400px;
+}
+
+.disabled-input {
+  border: solid 1px grey;
+  padding: 5px;
+}
+
+.ng-pristine {}
+
+.ng-dirty {}
+
+.ng-valid {}
+
+input.ng-invalid, select.ng-invalid {
+  border: solid 1px #ff4800;
+}
+
+.order-status .dropdown-menu {
+  padding: 5px;
+  left: -165px;
+  width: 285px;
+  top: 15px;
+  border: solid 5px #3498db;
+}
+
+.notification-bar .navbar-text {
+  color: white;
+  text-align: center;
+}
+
+.notification-bar.success .navbar-inner {
+  background-color: #48C9B0;
+}
+
+.notification-bar.error .navbar-inner {
+  background-color: #d85945;
+}
+
+.notification-bar.info .navbar-inner {
+  background-color: #5bace2;
+}
+
+dl.headed dt {
+  font-weight: bold;
+  font-size: larger;
+}
+
+dl.headed dd {
+  text-transform: capitalize;
+}
+
+button.nop {
+  padding: 1px 4px;
+}
+
+label.lister {
+  border-bottom: solid 1px white;
+  margin-top: 15px;
+}
+
+label.lister button {
+  float: right;
+  margin-top: -7px;
+  border-radius: 0;
+}
+
+ul.listing {
+  margin: 0;
+}
+
+ul.listing li {
+  list-style: none;
+  border: solid 1px rgb(164, 183, 218);
+  padding: 5px;
+}
+
+ul.listing li:hover {
+  background-color: #3391AF;
+  cursor: pointer;
+}
+
+ul.listing li i {
+  margin-right: 5px;
+}
+
+ul.listing + p {
+  margin-bottom: 10px;
+}
+
+#dialog-category ul {
+  min-height: 260px;
+  overflow-y: auto;
+  margin: 0px;
+}
+
+#dialog-category li {
+  border-bottom: solid 1px #ddd;
+  display: block;
+  height: 35px;
+}
+
+#dialog-category ul li button {
+  padding: 5px;
+  margin: 0;
+  border-radius: 0;
+  float: right;
+}
+
+tr.faded {
+  background-color: rgba(52, 202, 76, 0.25);
+  background-color: #2E604F;
+}
+
+.listofdrugs {
+  min-width: 200px;
+}
+
+.listofdrugs p {
+  font-size: 14px;
+  float: left;
+}
+
+.listofdrugs span {
+  font-weight: bold;
+  float: right;
+}
+
+.pr-btn-drpdwn {
+  margin-top: 5px !important;
+  margin-left: -50px;
+}
+
+.span-rgt-brd {
+  border-right: 1px rgba(20, 27, 37, 1) solid;
+  border-right: 1px #141B25 solid;
+  border-left: 1px rgba(20, 27, 37, 1) solid;
+  border-left: 1px #141B25 solid;
+  padding-right: 9px;
+  padding-left: 9px;
+  width: 235px;
+}
+
+.al-rulz-cont {
+  padding: 0 10px;
+}
+
+.al-rulz-cont p {
+  margin-bottom: 0px;
+  line-height: 12px;
+  font-weight: bold;
+}
+
+.al-rulz-cont span {
+  font-size: 11px;
+  color: #CACACA;
+}
+
+.scroll-pane {
+  -webkit-transition: all 1.0s ease-in-out;
+  -moz-transition: all 1.0s ease-in-out;
+  -o-transition: all 1.0s ease-in-out;
+  transition: all 1.0s ease-in-out;
+}
+
+.bell {
+  color: #000;
+  text-transform: capitalize;
+  margin-left: -105px;
+  font-size: 13px;
+}
+
+.btn-bell {
+  background-color: #ECF0F1;
+  border: solid 1px rgba(144, 144, 144, 1);
+  color: #000;
+
+}
+
+.btn-bell:hover {
+  color: #2C3E50;
+  background-color: #D6D6D6;
+}
+
+.ph-bx input {
+  color: black;
+}
+
+.nav, .pagination, .carousel a {
+  cursor: pointer;
+}
+
+.x-pagination button {
+  border-radius: 0;
+}
+
+.x-pagination .pageNo {
+  text-align: center;
+  font-size: large;
+  width: 50px;
+  position: relative;
+  border-radius: 0;
+  background-color: #1C2935;
+  box-sizing: border-box;
+  display: inline-block;
+}
+
+.x-pagination {
+  margin-top: 5px;
+  width: 100%;
+}
+
+.table-hover tbody tr {
+  cursor: pointer;
+}
+
+.table-hover tbody tr:hover {
+  color: #000;
+}
+
+.dropdown-menu li > p {
+  color: rgba(52, 73, 94, 0.75);
+  padding: 6px 15px 8px;
+  text-decoration: none;
+  -webkit-transition: background-color 0.25s;
+  -moz-transition: background-color 0.25s;
+  -o-transition: background-color 0.25s;
+  transition: background-color 0.25s;
+  -webkit-backface-visibility: hidden;
+}
+
+.dropdown-menu li > p > a {
+  text-decoration: none;
+  white-space: normal;
+  word-break: break-word;
+  font-size: 14px;
+}
+
+.upd-menu {
+  max-width: 250px;
+  text-transform: capitalize;
+  z-index: 99999;
+  margin-left: 7px;
+}
+
+.upd-menu li {
+  border-bottom: solid 1px #ddd;
+}
+
+.upd-menu li:last-child {
+  border-bottom: none;
+}
+
+.hdr h4 {
+  display: inline;
+  margin-bottom: 10px;
+}
+
+.hdr i {
+  float: right;
+}
+
+.hdr i:hover {
+  border-radius: 13px;
+  background-color: #000;
+  padding: 2px;
+  cursor: pointer;
+}
+
+.shpane {
+  background-color: #97C2EE;
+  border-left: solid 1px #2C3E50;
+  box-sizing: border-box;
+}
+
+.cat-li li {
+  min-height: 20px;
+}
+
+.cat-li li p.ct-name {
+  float: left;
+  display: inline-block;
+  min-width: 70%;
+}
+
+.cat-li p.ctrl {
+  min-width: 30%;
+}
+
+.shpane form {
+  max-height: 304px;
+}
+
+.shpane form > input {
+  padding: 2px;
+}
+
+.cbp_tmtimeline {
+  overflow-y: scroll;
+}
+
+.skdwn-hstry {
+  height: calc(100% - 123px);
+}
+
+.stup-hstry {
+  height: calc(100% - 50px);
+}
+
+.skdwn-summary {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 141px;
+}
+
+.skdwn-bp {
+  border: solid 1px #941111;
+  border-radius: 0;
+  height: 25px;
+  width: 100%;
+  padding: 0 5px;
+}
+
+[editable]:hover {
+  border: solid 1px white;
+}
+
+.editable-input {
+  position: absolute;
+  top: 0;
+}
+
+.slide-animate-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.slide-animate {
+  padding: 10px;
+}
+
+.slide-animate.ng-enter, .slide-animate.ng-leave {
+  -webkit-transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s;
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  padding: 10px;
+}
+
+.slide-animate.ng-enter {
+  top: -50px;
+}
+
+.slide-animate.ng-enter.ng-enter-active {
+  top: 0;
+}
+
+.slide-animate.ng-leave {
+  top: 0;
+}
+
+.slide-animate.ng-leave.ng-leave-active {
+  top: 50px;
+}
+
+em.versiontxt {
+  text-transform: lowercase;
+  font-size: smaller;
+}
+
+.print-div {
+  display: none;
+}
+
+.btn-bordered {
+  background-color: transparent !important;
+  border: solid 1px #fff;
+}
+
+.comp-list [disabled] {
+  background-color: transparent;
+  color: white;
+}
+
+.options-well {
+  color: black;
+}
+
+.logo-block {
+  display: inline-block;
+}
+
+.logo-block a {
+  width: 150px;
+  display: inline-block;
+}
+
+.account-information-pane {}
+
+.drop-search-bar {
+  top: 40px;
+}
+
+.order-tabs .active {
+  color: #476EA5;
+}
+
+.cart-order {
+  text-transform: none;
+}
+
+.cart-order a {
+  text-align: center;
+}
+
+.add-to-iv {
+  height: 200px;
+}
+
+.add-to-iv input {
+  width: 60%;
+  height: 35px;
+}
+
+.add-to-iv button {
+  background-color: transparent;
+  color: #000;
+  font-style: italic;
+  float: right;
+}
+
+.btn-mini {
+  padding: 2px;
+  font-size: 12px;
+}
+
+.btn-sky-blue {
+  background-color: #3FCABF;
+  color: white;
+}
+
+.btn-sky-blue:hover {
+  background-color: #3593CB;
+  color: white;
+}
+
+.order-row .btn {
+  font-size: 11px;
+  padding: 2px;
+  border-radius: 0 !important;
+}
+
+.order-row .btn-nobg {
+  background-color: transparent;
+  color: #000;
+}
+
+.panorama h5 {
+  font-size: 14px
+}
+.palette dt {
+  font-weight: bold;
+}
+.icon-match-ds {
+    position: relative;
+  top: 1px;
+  display: inline;
+  opacity: 0.7;
+  font-size: 14px;
+  padding-left: 10px;
+}
+form label {
+  color: black;
+}
+
+form p {
+  color: #34495E;
+}
+
+.palette-clouds {
+  color: #585B5E;
+}
+
+.ds-sr span.pr-title {
+  font-weight: bold;
+  display: block;
+  padding-right: 20px;
+}
+.ds-sr span.pr-title:hover {
+  color: #304DB7;
+}
+.ds-sr span.label {
+  float: right;
+  right: 0px;
+  position: relative;
+  top: 0;
+  display: inline-block;
+
+}
+.ds-sr span.label:hover{
+  cursor: pointer;
+}
+.ds-sr span.pr-price {
+  float: right;
+  color: #F89406;
+}
+.ds-sr a {
+  text-decoration: none;
+}
+.ds-sr .sup-prices-list{
+  display: block;
+}

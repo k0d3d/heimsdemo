@@ -1,0 +1,13 @@
+
+block body
+  .row-fluid.row-break(ng-init="template.url = 'templates/admin-configuration-tpl'")
+    .span2.actioncol
+      button.btn.btn-large.btn-block.btn-primary(ng-click="template.url = 'templates/admin-configuration-tpl'") Content
+      button.btn.btn-large.btn-block.btn-primary(ng-click="template.url = 'templates/admin-transactions-tpl'") Stock Transactions
+      button.btn.btn-large.btn-block.btn-primary(ng-click="template.url = 'templates/admin-hospital-info-tpl'") Account
+    .span10
+      .row(ng-include="template.url")
+        .span11.offset1()
+          .midheader(style="padding: 20px")
+            h3 Click on the buttons on the left
+            h5 and I'll go away.

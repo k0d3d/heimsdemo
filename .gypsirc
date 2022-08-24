@@ -1,0 +1,16 @@
+{
+  "main": {
+    "project_name": "integra-drugstoc",
+    "project_version": "1.0.1",
+    "project_entry_point": "/mnt/e6224e80-6563-4e23-8cf0-92086de10e93/kingkoded/Projects/Integra/server.js"
+  },
+  "coApps": {
+    "node": {},
+    "services": {
+      "1": {
+        "service_name": "httpd",
+        "service_desc": "Apache Server HTTP"
+      }
+    }
+  }
+}

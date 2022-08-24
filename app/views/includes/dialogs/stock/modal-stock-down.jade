@@ -1,0 +1,20 @@
+#modal-create-stock-down.modal.hide.fade.alt-text
+    .modal-header
+        h3 Create New Stock Down Point
+    .modal-body
+      form.new-stock-down
+          .control-group
+              label.control-label Name
+              .controls
+                  input.input-block-level(type="text",name="name", ng-model="location.locationName", required)
+          .control-group
+              label.control-label Staff In-Charge
+              .controls
+                  input.input-block-level(type="text",name="authority", ng-model="location.locationAuthority")
+          .control-group
+              label.control-label Description
+              .controls
+                  textarea.input-block-level(name="description", ng-model="location.locationDescription")
+    .modal-footer
+      button.btn.btn-default(new-modal="#modal-create-stock-down") Back
+      button.btn(ng-click="createPoint()",ng-init="saveButtonText='Create'", ng-class="saveButtonClass") {{saveButtonText}}

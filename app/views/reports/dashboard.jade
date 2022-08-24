@@ -1,0 +1,21 @@
+append head
+  link(rel='stylesheet', href='/css/table-fixed-header.css')
+
+block body
+  .row-fluid.row-break
+    .span2.actioncol
+      button.btn.btn-large.btn-block.btn-primary(ng-click="commons.backBtn()") Items
+      button.btn.btn-large.btn-block.btn-primary(ng-click="template.url = 'templates/order-report-tpl'") Orders
+      button.btn.btn-large.btn-block.btn-primary(ng-click="commons.backBtn()") Suppliers
+      button.btn.btn-large.btn-block.btn-primary(ng-click="commons.backBtn()") Dispensary
+      button.btn.btn-large.btn-block.btn-primary(ng-click="template.url = 'templates/location-report-tpl'") Stock Down
+      button.btn.btn-large.btn-block.btn-default(ng-click="commons.backBtn()") Go Back
+    .span10
+      .row-fluid.fixed-table
+        .slide-animate-container
+          .slide-animate(ng-include="template.url")
+
+
+
+append foot
+  script(src="js/table-fixed-header.js")

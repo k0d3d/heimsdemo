@@ -1,0 +1,60 @@
+#dialog-view-bill.modal.hide.fade.alt-text()
+  .modal-header
+    h4 Bill for {{activeBill.patientName}}
+  #print-bill.modal-body
+    dl
+      dt Patient Name
+      dd {{activeBill.patientName}}
+      dt Patient ID
+      dd {{activeBill.patientId}}
+      dt Billed On
+      dd {{activeBill.billedOn | date:medium}}
+      dt Company / Patient Class
+      dd {{activeBill.billClassName}}
+    table.table.table-condensed
+      thead
+        tr
+          th Item
+          th Quantity
+          th Cost (N)
+      tbody
+        tr(ng-repeat="b in activeBill.billedItems")
+          td {{b.item}}
+          td {{b.amount}}
+          td {{b.cost}}
+      tfoot
+        tr
+          td <strong>Total</strong>
+          td
+          td {{activeBill.billCost}}
+    .pay-bx
+      h4 Payment History
+      table.table.table-striped
+        thead
+          tr
+            th Amount Paid (N)
+            th Date
+        tbody
+          tr(ng-repeat="p in activeBill.paymentHistory")
+            td {{p.amount}}
+            td {{p.date | date: mediumDate}}
+        tfoot
+          tr
+            td Outstanding Amount
+            td <span style="color:red">N {{activeBill.outstanding}}</span>
+      form.form
+        .control-group(ng-show="activeBill.outstanding > 0")
+          .controls
+            input.input-medium(type="number", ng-model="newpaymentamount", placeholder="Amount Paid", style="height: 41px")
+            //button.btn(type="button", disabled) {{p.date | date: mediumDate}}
+            button.btn.btn-info(type="button", ng-click="markpaid(newpaymentamount, activeBill._id, $index)") Enter
+  .modal-footer
+    button.btn.btn-default(new-modal="#dialog-view-bill")
+      i.fa.fa-times
+      | Close
+    button.btn.btn-inverse(ng-click="print_bill('#print-bill')")
+      i.fa.fa-print
+      | Print
+
+    //button.btn.btn-inverse(printable="print-bill", print-tpl="bill-print", checkfunc="print_bill(cb)") Print
+      i.fa.fa-print

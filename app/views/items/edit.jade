@@ -1,0 +1,72 @@
+block body
+  include ../includes/modals/items/modal-item.jade
+  include ../includes/dialogs/items/category.jade
+  include ../includes/dialogs/items/form.jade
+  include ../includes/dialogs/items/packaging.jade
+  .row-fluid.row-break
+    .span2.actioncol
+      button.btn.btn-large.btn-block.btn-primary(ng-click="updateItem()") Update
+      button.btn.btn-large.btn-block.btn-primary(ng-click="commons.backBtn()") Go Back
+    .span8
+      .row-fluid
+        form#form-add-item(name="editItem")
+          .span4
+            label(for="itemtype") Inventory Type
+            select(name="itemtype",class="span6",ng-model="form.itemType", required)
+              option Personals
+              option Office Stuff
+            label(for="name") Brand Name
+            input.input-medium(type="text",name="name", ng-model="form.itemName", brand-name-type-ahead="form", required, autocomplete="off")
+            label(for="man-name") Manufacturer
+            input#manufacturerName.input-medium(name="manufacturerName",type="text",ng-model="form.manufacturerName")
+            label(for="supplier") Importer
+            input.input-medium(type="text", name="supplier",ng-model="form.importer", style="color:black;" )
+
+            a(ng-click="getByRegNo()",  href="", style="margin-left: 10px; text-transform: Capitalize") Find
+            label.lister(for="category") Category
+              button.btn.btn-mini.btn-info.nop(new-modal="#dialog-category")
+                i.fa.fa-ellipsis-horizontal
+            ul#itemCategory.fa-ul.listing(ng-model="form.itemCategory")
+              li(ng-repeat="itemCat in form.itemCategory ", ng-click="removeItemCat($index)")
+                | {{itemCat}}
+            p {{form.itemCategory.length}} categories selected.
+
+            label(for="itemdesc") Item Description
+            textarea(name="itemdesc",ng-model="form.itemDescription")
+            label(for="name") Sell as Group Item
+            input.input-medium(type="text",name="name", type-ahead="form", autocomplete="off", type-action="add_grouped_item", th-name="itemname", selected-item="selectedItem")
+            ul#g4.fa-ul.listing(ng-model="form.groupedItems")
+              li(ng-repeat="gi in form.groupedItems ", ng-click="removeGroupedItem($index)")
+                | {{gi.itemName}}
+            p.helptext(style="text-transform: none") {{form.groupedItems.length || 0}} items grouped with <strong>{{form.itemName}}.</strong>
+
+
+          .span4.offset2
+            label.lister(for="supplier") Supplier
+            ul#itemSuppliers.fa-ul.listing(ng-model="form.suppliers")
+              li(ng-repeat="itemSup in form.suppliers", ng-click="removeItemSup($index)")
+                | {{itemSup.supplierName}}
+            input.input-medium(type="text", name="supplier", supplier-name-type-ahead)
+            p {{form.suppliers.length}} suppliers selected.
+
+            label(for="item-size") Item contains a total of
+            input.input-small(type="text",name="item-size",ng-model="form.itemSize", required)
+
+            label(for="itemform") (Item Form)
+            select(name="itemform",ng-model="form.itemForm", ng-options="c for c in commons.itemForm", ng-show="itemFormShow")
+            p.disabled-input(ng-click="itemFormShow = !itemFormShow", ng-init="itemFormShow = false", ng-show="!itemFormShow") {{form.itemForm}}
+
+            label(for="itemsize") minimum unit per sale
+            input.input-small(name="itemsize",type="number",ng-model="form.packageSize", required)
+            span.helptext {{form.itemForm}}
+
+            label(for="itempackaging") packaged in one
+            select(name="itempackaging",ng-model="form.itemPackaging", ng-options="d for d in commons.itemPackaging", ng-show="itemPackagingShow")
+            p.disabled-input(ng-click="itemPackagingShow = !itemPackagingShow", ng-init="itemPackagingShow = false", ng-show="!itemPackagingShow") {{form.itemPackaging}}
+
+
+            label(for="bp") Reorder Level
+            input.input-small(type="number",name="bp",ng-model="form.itemBoilingPoint", ng-minlength=0, ng-maxlength=100)
+
+            label(for="rate") Purchase Rate
+            input.input-small(type="number",name="op",ng-model="form.itemPurchaseRate")

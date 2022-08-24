@@ -1,0 +1,27 @@
+.span12(ng-controller="transactionController")
+  .row-fluid.fixed-table
+    .table-content
+      table#list-orders.table.table-fixed-header
+        thead.header
+          tr
+            th Origin
+            th Amount
+            th Destination
+            th Item
+            th Status
+            th Started
+            th Last Update
+            th Action
+        tbody
+          tr(ng-repeat="t in transactions | orderBy: 'updated': true")
+            td {{t.origin.locationName}}
+            td {{t.amount}}
+            td {{t.destination.locationName}}
+            td {{t.item.itemName}}
+            td {{t.status}}
+            td {{t.started | date: 'medium'}}
+            td {{t.updated | date: 'medium'}}
+            td {{t.operation}}
+            td
+              button.btn.btn-primary() Rollback
+              button.btn.btn-primary() Cancel

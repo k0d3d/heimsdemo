@@ -1,0 +1,28 @@
+{
+    "db": {
+        "database": "stocdb",
+        "server": "cluster0.k0wv7gz.mongodb.net",
+        "user": "heimsdemo",
+        "password": "beauty4ashes",
+        "port": 27017,
+        "mongoUrl": "mongodb+srv://heimsdemo:beauty4ashes@cluster0.k0wv7gz.mongodb.net/?retryWrites=true&w=majority"
+    },
+    "app": {
+        "name": "DemoHeimsApp",
+        "main_stock_id": "",
+        "root":""
+    },
+    "api":{
+			"hmis_url": "http://192.168.2.7"
+    },
+    "sms" : {
+        "accounts" : {
+        },
+        "delimeter": {
+            "accepted": "#"
+        },
+        "general" : {
+            "sender" : "DrugStoc"
+        }
+    }
+}

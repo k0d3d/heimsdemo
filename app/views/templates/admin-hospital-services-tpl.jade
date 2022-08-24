@@ -1,0 +1,18 @@
+.span11.offset1()
+  .row
+    form#login(novalidate, ng-submit="srvs.makeNewService()")
+      label(for="name") Service name
+      input#name.span6(type="text",name="name",ng-model="srvs.new_name", required, placeholder="e.g. Consultancy, Lab Test")      
+      button.btn.btn-info(type="submit") Create
+  .row
+    table.table.table-hover
+      thead
+        tr
+          th Service name
+          th 
+      tbody
+        tr(ng-repeat="srv in srvs.services")
+          td(style="width: 80%") {{srv.name}}
+          td
+            button.btn.btn-danger(ng-click="srvs.removeService($index)")
+              i.fa.fa-times

@@ -1,0 +1,70 @@
+nav.cbp-spmenu.cbp-spmenu-vertical.cbp-spmenu-right(ng-controller='summarydataCtrl')
+  h3 Item Summary
+  div.summary
+    dl
+      dt Name
+      dd(ng-init="name='Amoxillin'") {{name}}
+      dt Scientific Name
+      dd Amoxicillin 875mg  &Clavulanic acid  125mg
+      dt Manufacturer
+      dd {{manname}}
+      dt Supplier
+      dd Tylek
+      dt Current Stock
+      dd 200
+      dt Last Order Date
+      dd Tuesday March 03 2013
+      dt Rate
+      dd 2000/box
+  div.summary-actions
+    p 
+      button.btn.btn-block.btn-warning(data-arhref='/edititem/{{arid}}') Edit Item
+    p 
+      button.btn.btn-block.btn-warning Place Order
+    p 
+      button.btn.btn-block.btn-warning Return Order
+    p 
+      button.btn.btn-block.btn-danger Delete Item
+    p 
+      button.btn.btn-block.btn-default.btn-close Close
+
+.row-fluid.row-break
+  .span2.actioncol
+    <a class="btn btn-large btn-block btn-primary" href="#fakelink">Save Order</a>
+    <a class="btn btn-large btn-block btn-primary" href="#fakelink">Go Back</a>
+  .span10
+    .row-fluid
+      .sectionAZ
+        #sectionA.card-section.span5
+          span.legend A
+          .card(data-id="1", data-itemname="Animoral")
+            h5 Animoral
+            span.low 200
+          .card(data-id="1", data-itemname="Ampicillin")
+            h5 Ampicillin
+            span.ok 1200
+          .card(data-id="1", data-itemname="Amoxillin") 
+            h5 Amoxillin
+            span.empty 0
+        #sectionB.card-section.span5
+          span.legend B
+          .card.low-stock(data-id="1", data-itemname="Animoral")
+            h5 Animoral
+            span 200
+          .card.good-stock(data-id="1", data-itemname="Ampicillin")
+            h5 Ampicillin
+            span.ok 1200
+          .card.empty-stock(data-id="1", data-itemname="Amoxillin") 
+            h5 Amoxillin
+            span.empty 0
+          .card.low-stock(data-id="1", data-itemname="Animoral")
+            h5 Animoral
+            span 200
+          .card.good-stock(data-id="1", data-itemname="Ampicillin")
+            h5 Ampicillin
+            span.ok 1200
+          .card.empty-stock(data-id="1", data-itemname="Amoxillin") 
+            h5 Amoxillin
+            span.empty 0 
+
+script(src='js/viewitems.js')                        

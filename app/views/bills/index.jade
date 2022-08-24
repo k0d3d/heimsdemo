@@ -1,0 +1,43 @@
+append head
+  link(rel='stylesheet', href='/css/table-fixed-header.css')
+
+block body
+  .row-fluid.row-break
+    .span2.actioncol
+      button.btn.btn-large.btn-block.btn-default(ng-click="backBtn()") Go Back
+    .span10
+      .row-fluid.fixed-table
+        .table-content
+          table#list-orders.table.table-fixed-header
+            thead.header
+              tr
+                th Prescription ID
+                th Patient Name
+                th Company
+                th Bill Class
+                th Price
+                th Status
+                th Action
+            tbody
+              tr(ng-repeat="bill in bills", on-finish="tableheader")
+                td {{bill.dispenseID._id}}
+                td {{bill.patientName}}
+                td {{bill.dispenseID.company}}
+                td 
+                  .btn-group
+                    button.btn.btn-small Class
+                    button.btn.btn-small.dropdown-toggle(data-toggle="dropdown")
+                      span.caret
+                    ul.dropdown-menu.alt-text
+                      li <a href="#">Gold</a>
+                      li <a href="#">Platinum</a>
+                      li <a href="#">Diamond</a>                
+                td
+                td
+                td 
+
+
+
+append foot
+  script(src="js/table-fixed-header.js")                
+

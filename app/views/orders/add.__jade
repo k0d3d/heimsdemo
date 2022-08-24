@@ -1,0 +1,102 @@
+block body
+  include ../includes/modals/modal.jade
+  .row-fluid.row-break()
+    .span2.actioncol
+      button.btn.btn-large.btn-block.btn-primary(type="button",ng-click='submitOrder()', ng-disabled="newOrder.$invalid") Place Order
+      button.btn.btn-large.btn-block.btn-default(ng-click="commons.backBtn()") Go Back
+    .span9
+      .row(style="margin-bottom: 30px;")
+        .span11.offset1
+          .btn-group
+            button.btn.btn-large.btn-default(type="button",ng-click='toggle()', ng-disabled="plcordr") New Order
+            button.btn.btn-large.btn-default(type="button",ng-click='toggle()', ng-disabled="searchndl") Search NDL
+      .row  
+        .span11.offset1(ng-show="plcordr")
+          .row-fluid
+            .span6
+              form#form-new-order(name="newOrder", novalidate)
+                label(for="itemtype") Inventory Type
+                select#itemType.input-medium(name="orderType",ng-model="form.orderType")
+                  option Medication
+                  option Medical Equipment
+                label(for="itemname") Item / Drug Name
+                input#itemname.span6(type="text",name="itemName",ng-model="form.itemData.itemName",order-item-type-ahead, required)
+                input#itemname(type="hidden",name="itemID",ng-model="form.itemData.itemID")          
+                label(for="orderdate") Order Date
+                input#orderdate.span5(type="date", name="orderDate", ng-model="form.orderDate")
+                label(for="orderamount") Order Amount
+                input#orderamount.span4(type="number",name="orderAmount",ng-model="form.orderAmount", required)
+                label(for="orderdesc") Order Description
+                textarea#orderdesc.span6(ng-model="form.orderDescription",name="orderDescription")
+                label(for="orderamount") Order Supplier
+                input#order-supplier-name.span6(type="text",name="orderSupplierName",ng-model="form.suppliers.supplierName",order-supplier-type-ahead, required) 
+            .span4.offset2
+              #item-summary.open-summary(summary-data="summary", ng-class="ordersummary")
+                h3 Item Summary
+                div.summary
+                  dl
+                    dt Name
+                    dd {{summary.itemName}}
+                    dt Scientific Name
+                    dd {{summary.sciName}}
+                    dt Manufacturer
+                    dd {{summary.manufacturerName}}
+                    dt Current Stock
+                    dd {{summary.currentStock}}
+                    dt Last Supply Date
+                    dd {{summary.lastSupplyDate | date:'medium'}}
+                    dt Rate
+                    dd {{summary.itemPurchaseRate}}    
+                    dt Boiling Point
+                    dd {{summary.itemBoilingPoint}}
+                    dt Item Form
+                    dd {{summary.itemForm}}
+                    dt Item Packaging
+                    dd {{summary.itemPackaging}}
+                    dt Package Size
+                    dd {{summary.packageSize}}
+                    dt Item Category
+                    dd {{summary.category}}
+        .span11.offset1(ng-show="searchndl")
+          .span7
+            .row
+              form#form-new-order(name="searchform", novalidate, ng-submit="searchcmp()")
+                label(for="itemtype") Drug Composition
+                input.input-large(type="search", ng-model="drugcmp")
+                button.btn.btn-primary(type="submit") Search Composition
+              .result(ng-show="cmps.length > 0")
+                table.table.table-hover.table-bordered
+                  thead
+                    tr
+                      th Drug Name
+                      th Composition
+                      th Price / Packaging
+                  tbody
+                    tr(ng-repeat="cmp in cmps", ng-click="more($index)")
+                      td {{cmp.productName}}
+                      td {{cmp.composition}}
+                      td {{cmp.currentPrice}}
+                .x-pagination(pagination, page-to="searchcmp(pageNo, cb)")
+
+          .span4.offset1
+            .row-fluid
+              #item-summary.open-summary()
+                h3 Drug Summary
+                div.summary
+                  dl
+                    dt Name
+                    dd {{ds.productName}}
+                    dt Composition
+                    dd {{ds.composition}}
+                    dt Manufacturer / Supplier
+                    dd {{ds.man_imp_supp}}
+                    dt Current Price
+                    dd {{ds.currentPrice}}
+                    dt Category
+                    dd {{ds.category}}
+                    dt Last Updated
+                    dd {{ds.lastUpdated | date:medium}}
+                    dt 
+                    dd
+                      button.btn.btn-mini.btn-success(ng-disabled="!ds", ng-click="orderthis()") Order this
+    

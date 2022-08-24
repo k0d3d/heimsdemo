@@ -1,0 +1,78 @@
+append head
+  link(rel='stylesheet', href='/css/table-fixed-header.css')
+
+append mainbody
+  include ../includes/modals/supplier/modal-more.jade
+  include ../includes/modals/supplier/modal.jade
+.row-fluid.row-break
+  .span2.actioncol(ng-init="new = false; all = true;")
+    button.btn.btn-large.btn-block.btn-primary(ng-click="new = !new;all = !all;", ng-disabled="all") All Suppliers
+    button.btn.btn-large.btn-block.btn-primary(ng-click="new = !new;all = !all;", ng-disabled="new") New Supplier
+    button.btn.btn-large.btn-block.btn-default(ng-click="commons.backBtn()") Go Back
+  .span8.offset1(ng-show="new", ng-controller="supplierAddController")
+    h3 New Supplier Entry Form
+    form.newsupplier(name="newsupplier", novalidate)
+      .control-group
+          label.control-label Supplier Name
+          .controls
+              input.input-medium(type="text",name="patientname", ng-model="supplierForm.supplierName", required)
+      .control-group
+          label.control-label Address
+          .controls
+              textarea.input-medium(type="text",name="company", ng-model="supplierForm.address", required)
+      .control-group
+          label.control-label Phone Number
+          .controls
+              input.input-medium(type="tel",name="phoneNumber", ng-model="supplierForm.phoneNumber", required)
+      .control-group
+          label.control-label Other Contact
+          .controls
+              textarea.input-medium(type="text",name="otherContact", ng-model="supplierForm.otherContact")
+      .control-group
+          label.control-label Email Address
+          .controls
+              input.input-medium(type="email",name="email", ng-model="supplierForm.email")    
+      .control-group
+          label.control-label Contact Person
+          .controls
+              input.input-large(type="text",name="contactPerson", ng-model="supplierForm.contactPerson", required)       
+      .control-group
+          label.control-label Contact Person Phone
+          .controls
+              input.input-large(type="tel",name="contactPersonPhone", ng-model="supplierForm.contactPersonPhone", required)                                            
+      button.btn.btn-primary(ng-click="addSupplier()",ng-init="saveButtonText='Save'", ng-disabled="newsupplier.$invalid") {{saveButtonText}}
+  .span10(ng-show="all")
+    .row-fluid
+      form.form-search(ng-submit="searchSuppliers()")
+        .control-group
+          .controls
+            input.input-large.search-query(ng-model="searchInput", type="search", name="searchSupplier", placeholder="Find a Supplier")
+            button.btn(type="reset") Reset
+            button.btn(type="submit") Submit
+    .row-fluid.fixed-table
+      .span12
+        .table-content(ng-show="supplierList.length > 0")
+          table#list-suppliers.table.table-fixed-header
+            thead.header
+              tr
+                th Supplier Name
+                th Phone Numbers
+                th Contact Person
+                th Supplier Since
+                th Actions
+            tbody
+              tr(ng-repeat="supplier in supplierList", on-finish="tableheader")
+                td {{supplier.supplierName}}
+                td {{supplier.phoneNumber}}
+                td {{supplier.contactPerson}}
+                td {{supplier.addedOn | date: 'medium'}}
+                td 
+                  button.btn.btn-primary.btn-mini(ng-click="viewMore($index)") More
+                  button.btn.btn-danger.btn-mini(ng-click="removeSupplier($index)") Delete
+        .x-pagination(pagination, page-to="page(pageNo, limit, cb)")
+        h2(ng-show="supplierList.length == 0") No Suppliers Added
+
+
+
+append foot
+  script(src="js/table-fixed-header.js")                

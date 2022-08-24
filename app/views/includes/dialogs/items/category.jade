@@ -1,0 +1,17 @@
+#dialog-category.modal.hide.fade.alt-text()
+  .modal-header
+    h4 Add a new Category
+  .modal-body
+    input(type="text", ng-model="catInput")
+    button.btn.btn-success(type="submit", ng-click="addCat()") Add
+    h4 Select Categories
+    ul.cat-li
+      li(ng-repeat="cat in catList")
+        p.ct-name {{cat.categoryName}}
+        p.ctrl
+          button.btn.btn-mini(href="#", ng-click="removeCat($index)", ng-disabled="cat.categoryType == 'system'", ng-show="cat.categoryType != 'system'")  Delete        
+          button.btn.btn-mini(href="#", ng-click="addToItem($index)")  Add
+        .clearfix
+    p {{catList.length}} categories.
+  .modal-footer
+    button.btn.btn-default(new-modal="#dialog-category") Close

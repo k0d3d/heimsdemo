@@ -1,0 +1,59 @@
+#home.panorama(panorama)
+  .panorama-sections
+    .row-fluid.row-break
+      #items-section.actionSection.span6.panorama-section
+        .row-fluid
+          .span6
+            .tile.palette-emerald(ng-click="commons.href('items')")
+              .tile-sub
+                span.enicon.whiteicon &#57349;
+                h4 View Inventory
+          .span6
+            .tile.palette-turquoise(ng-click="commons.href('items/add')")
+              .tile-sub
+                span.enicon.whiteicon &#10133;
+                h4 Add Inventory
+        .row-fluid.row-break
+          .span4
+            .tile.palette-pomegranate(ng-click="commons.href('items/view/low')")
+              .tile-sub
+                span.enicon.whiteicon &#128255;
+                h4 {{itemsCount.low}}
+                span Low Stock Items
+          .span4
+            .tile.palette-concrete
+              .tile-sub
+                h4 {{itemsCount.count}}
+                span total stock
+      #orders-section.actionSection.span6.panorama-section
+        .row-fluid
+          .span8
+            .tile.palette-nephritis(ng-click="commons.href('orders')")
+              .tile-sub
+                span.enicon.whiteicon &#128200;
+                h4 View Orders
+        .row-fluid.row-break
+          .span6
+            .tile.palette-turquoise(ng-click="commons.href('orders/pending/order')")
+              .tile-sub
+                h4 {{ordersCount.pendingorders}}
+                span pending orders
+          .span6
+            .tile.palette-turquoise(ng-click="commons.href('orders/pending/invoices')")
+              .tile-sub
+                h4 {{ordersCount.pendingpayment}}
+                span pending payments
+      #admin-section.actionSection.span6.panorama-section
+        .row-fluid
+          .span10
+            .tile.palette-green-sea(ng-click="commons.href('stock/locations')")
+              .tile-sub
+                h4 Stock Down Points
+        .row-fluid.row-break
+          .span8
+            .tile.palette-belize-hole(ng-click="commons.href('suppliers')")
+              .tile-sub
+                h4 Suppliers
+
+append foot
+  script(src='/js/index.js')

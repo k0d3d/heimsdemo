@@ -1,0 +1,76 @@
+.span11(ng-init="billingPaneActive = false", style="margin-left: 20px")
+  .row-fluid.fixed-table
+    .span3.span-rgt-brd(style="width:235px")
+      h4 Billing Profiles
+        select(ng-options="a.profileName for a in bill.profiles", ng-model="bill.activeProfile", ng-change="bill.js()")
+        .btn-group
+          button.btn.btn-primary.btn-block(ng-click="bill.popRules(); billingPaneActive = !billingPaneActive") View All Rules
+            i.fa.fa-list-ul
+      .b-ru-bx
+        h4 New Rule
+        form(novalidate)
+          label Rule Name
+          input.input-medium(type="text", ng-model="bill.newrule.name", placeholder="Rule Name", required)
+          label Property
+          select.input-medium(type="text", ng-model="bill.newrule.reference.type", placeholder="Property", required, ng-init="bill.newrule.reference.type = 'drug'")
+            option(value="drug") Drug Item
+            option(value="category") Drug Category
+            //option(value="medsrvs") Medical Service
+            //option(value="other") Other
+          label Subject
+          input(type="text", ng-model="bill.newrule.reference.name", placeholder="eg. Panadol, Emvite", required, title="Type ALL or * To apply rule to all items", propdrug, ng-show="bill.newrule.reference.type =='drug'")
+          input(type="text", ng-model="bill.newrule.reference.name", placeholder="eg. Consultancy", required, title="Type ALL or * To apply rule to all items", propmedserv, ng-show="bill.newrule.reference.type =='medsrvs'")
+          label Adjust by
+          select.input.small(ng-model="bill.newrule.by", placeholder="By", required)
+            option Percentage
+            option Value
+            option Flat Fee
+          label(ng-show="bill.newrule.by == 'Percentage'") Value (%)
+          input.input-small(type="Number", min="0", ng-show="bill.newrule.by == 'Percentage'", ng-model="bill.newrule.value", required)
+          label(ng-show="bill.newrule.by == 'Value'") Value (N +/-)
+          input.input-small(type="Number", min="0", ng-show="bill.newrule.by == 'Value'", ng-model="bill.newrule.value", required)
+          label(ng-show="bill.newrule.by == 'Flat Fee'") Flat Fee (N)
+          input.input-small(type="Number", min="0", ng-show="bill.newrule.by == 'Flat Fee'", ng-model="bill.newrule.value", required)
+          label Process
+          select.input.small(ng-model="bill.newrule.directive", required)
+            option Increment
+            option Decrement
+          button.btn.btn-primary.btn-block(type="submit", ng-click="bill.newruleC()") Add Rule
+    section.span8
+      .row(style="width: 865px")
+        .scroll-pane.span4(ng-show="billingPaneActive", style="border-right: solid 5px rgba(221, 221, 221, 0.31);padding-left: 10px;min-height: 556px")
+          .al-rulz-cont
+            .hdr
+              h4 Rules
+              i.fa.fa-times(ng-click="billingPaneActive = !billingPaneActive")
+            ul.listing
+              li(ng-repeat="r in bill.rulez", ng-click="bill.pushrule($index)")
+                p {{r.name}}
+                span {{r.directive}} {{r.servicename}} by {{r.value}} ({{r.by}})
+        .span8
+          .profile-name
+            form.form-horizontal
+              input.input-large(type="text", ng-model="bill.profileInput.name", required)
+              .btn-group
+                button.btn.btn-large.btn-block.btn-warning(ng-click="bill.saveProfile()")
+                  i.fa.fa-save(style="margin-right: 5px")
+                  | Save
+          .table-content
+            table#list-rules.table.table-fixed-header
+              thead.header
+                tr
+                  th Rule name
+                  th Subject
+                  th Adjust by
+                  th Value
+                  th Process
+                  th Action
+              tbody
+                tr(ng-repeat="rlz in bill.listrules")
+                  td {{rlz.name}}
+                  td {{rlz.servicename}}
+                  td {{rlz.by}}
+                  td {{rlz.value}}
+                  td {{rlz.directive}}
+                  td
+                    i.fa.fa-times.pull-right(ng-click="bill.removeFromList($index)")
