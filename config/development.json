@@ -1,11 +1,11 @@
 {
     "db": {
-        "database": "stocdb",
+        "database": "heimsapp",
         "server": "cluster0.k0wv7gz.mongodb.net",
-        "user": "heimsdemo",
-        "password": "beauty4ashes",
+        "user": "appuser",
+        "password": "2QqSNHKXwoYRGwSd",
         "port": 27017,
-        "mongoUrl": "mongodb+srv://heimsdemo:beauty4ashes@cluster0.k0wv7gz.mongodb.net/?retryWrites=true&w=majority"
+        "mongoUrl": "mongodb+srv://appuser:2QqSNHKXwoYRGwSd@cluster0.k0wv7gz.mongodb.net/heimsapp?retryWrites=true&w=majority"
     },
     "app": {
         "name": "DemoHeimsApp",
