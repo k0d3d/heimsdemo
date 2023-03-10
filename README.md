@@ -12,4 +12,4 @@ Jasmine-node
 
 @pinkybrayne
 
-CopyRight c2015 Integra Health
+CopyRight c2023 Pxlart Design
