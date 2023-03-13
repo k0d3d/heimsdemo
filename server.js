@@ -80,17 +80,6 @@ function afterResourceFilesLoad() {
   // set logging level - dev for now, later change for production
   app.use(logger("dev"));
 
-  // expose package.json to views
-  // app.use(function (req, res, next) {
-  //   res.locals.pkg = pjson;
-  //   res.locals.facility = {
-  //     name: 'New Ikeja Hospital',
-  //     address: 'Gbajobi Ikeja',
-  //     phone_number: '08126488955'
-  //   };
-  //   next();
-  // });
-
   // signed cookies
   app.use(cookieParser(config.express.secret));
 
@@ -111,15 +100,8 @@ function afterResourceFilesLoad() {
       saveUninitialized: true,
       secret: config.express.secret,
       store: MongoStore.create({
-        // db: config.db.database,
-        // host: config.db.server,
-        // port: config.db.port,
-        // autoReconnect: true,
-        // username: config.db.user,
-        // password: config.db.password,
-        // collection: "mongoStoreSessions",
-        url: config.db.mongoUrl,
-        mongoUrl: config.db.mongoUrl,
+        url: process.env.MONGO_URL,
+        mongoUrl: process.env.MONGO_URL,
       }),
     })
   );
