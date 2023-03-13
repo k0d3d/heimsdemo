@@ -1,11 +1,11 @@
 {
   "db": {
       "database": "heimsapp",
-      "server": "cluster0.k0wv7gz.mongodb.net",
-      "user": "appuser",
-      "password": "2QqSNHKXwoYRGwSd",
+      "server": "",
+      "user": "",
+      "password": "",
       "port": 27017,
-      "mongoUrl": "mongodb+srv://appuser:2QqSNHKXwoYRGwSd@cluster0.k0wv7gz.mongodb.net/heimsapp?retryWrites=true&w=majority"
+      "mongoUrl": ""
     },
   "app": {
       "name": "DemoHeimsApp",
